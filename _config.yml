@@ -8,4 +8,4 @@ search_enabled: true
 # Enable support for hyphenated search words:
 search_tokenizer_separator: /[\s/]+/
 
-footer_content: "Copyright &copy; 2020 YOUR NAME. More information about <a href=\"/license\">licensing here.</a>"
+footer_content: "Copyright &copy; 2020 Heikki Ahonen. More information about <a href=\"/algo-and-data/license\">licensing here.</a>"
