@@ -1,5 +1,5 @@
 ---
-title: "Part 0 - Learning goals"
+title: "Learning goals"
 permalink: /part0/
 nav_order: 2
 published: true

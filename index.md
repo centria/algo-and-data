@@ -1,10 +1,10 @@
 ---
-title: "Introduction"
+title: "Home"
 permalink: /
 nav_order: 1
 ---
 
-## Introduction
+## Course information
 
 This site is meant for **Algorithms and data structures** course in [Centria University of Applied Sciences](https://web.centria.fi/en). The course material will evolve and extend during the period of the course.
 
