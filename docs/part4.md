@@ -8,3 +8,9 @@ published: true
 # Data structures
 
 Here will be more.
+
+## List
+
+## Tree
+
+### Binary search tree

@@ -12,5 +12,3 @@ Here will be more.
 ## List
 
 ## Tree
-
-## Heap

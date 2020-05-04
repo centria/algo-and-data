@@ -5,10 +5,9 @@ nav_order: 6
 published: true
 ---
 
-# Algorithms
-
-Here will be more.
-
-## P=NP
+# Graphs
 
 Here will be even more.
+
+## BFS and DFS
+
