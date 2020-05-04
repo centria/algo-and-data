@@ -1,6 +1,6 @@
 ---
 title: "Learning goals"
-permalink: /part0/
+permalink: /goals/
 nav_order: 2
 published: true
 ---
