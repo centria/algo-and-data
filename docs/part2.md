@@ -1,10 +1,10 @@
 ---
-title: "Part 2"
+title: "Part 2 - Time Complexity"
 permalink: /part2/
 nav_order: 3
 published: true
 ---
 
-## Part 2
+# Time Complexity
 
 Here will be more.

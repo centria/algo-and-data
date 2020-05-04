@@ -1,10 +1,10 @@
 ---
-title: "Part 3"
+title: "Part 3 - Recursion"
 permalink: /part3/
 nav_order: 4
 published: true
 ---
 
-## Part 3
+# Recursion
 
 Here will be more.

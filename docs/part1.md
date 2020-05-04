@@ -1,10 +1,10 @@
 ---
-title: "Part 1"
+title: "Part 1 - Introduction"
 permalink: /part1/
 nav_order: 3
 published: true
 ---
 
-## Part 1
+# Introduction
 
-Here is another chapter.
+In this course, we learn about algorithms and data structures.
