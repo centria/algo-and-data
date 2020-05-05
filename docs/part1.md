@@ -19,13 +19,23 @@ Even though most of the data structures we will handle on this course have been 
 
 The course runs for 6 weeks and is worth 3 credits. As one credit is 27 hours, this means that weekly amount of work is around 15 hours. Out of this 15, 5 are considered for the lectures (even though they might not last that long), and around 10 for homework.
 
-The course consists of lectures, which at least in **spring 2020** are held online, in Teams. Each lecture session is 2-3 x 90 minutes or so, depending on the session and the amount of questions from the students. For best learning experience, I encourage you to ask questions, especially if you want to know more of a certain subject.
+* The course consists of lectures, which at least in **spring 2020** are held online, in Teams, on **Wednesdays 10 to 15**, including breaks. 
 
-After the lecture, exercises will be published, and the deadline is before the next week's lecture, unless stated otherwise. The exercises are meant to be done individually, and each student return their own answers. You can, of course, help each other, and I do encourage you to do so. Each student, anyways, returns their own answers. [**More information about the exercises are on the exercise page.**](../exercises)
+Each lecture session is 2-3 x 90 minutes or so, depending on the session and the amount of questions from the students. For best learning experience, I encourage you to ask questions, especially if you want to know more of a certain subject.
+
+Participation on the lectures is not compulsory, and you should get the same information by reading this course page. The lessons **are recorded**, so you can also view them afterwards.
+
+* After the lecture, exercises will be published, and the deadline is before the next week's lecture, unless stated otherwise. 
+
+The exercises are meant to be done individually, and each student return their own answers. You can, of course, help each other, and I do encourage you to do so. Each student, anyways, returns their own answers. [**More information about the exercises are on the exercise page.**](../exercises) The answers will be handled on the next lecture.
+
+* On **Fridays 10 to 15** an exercise session is open for this course and Design and Documentation course. You can ask questions about the exercises there.
+
+The exercise sessions are held in **Teams**, and are completely voluntary. These sessions **will not** be recorded.
 
 ## What are algorithms?
 
-Algorithm, in its simplest form, is an instruction. With said instruction, we can solve a computational problem. Algorithm is given an **input**, which describes the problem, and it produces an **output**, which is the answer to the given problem. All of us have encountered algorithms in our lives, but probably don't think of them as such. The most common algorithm in daily life is probably a **cooking recipe**. Let's take a look.
+*Algorithm*, in its simplest form, is an instruction. With said instruction, we can solve a computational problem. Algorithm is given an **input**, which describes the problem, and it produces an **output**, which is the answer to the given problem. All of us have encountered algorithms in our lives, but probably don't think of them as such. The most common algorithm in daily life is probably a **cooking recipe**. Let's take a look.
 
 
 * 1/2 l    milk
@@ -83,3 +93,13 @@ print sum
 ```
 
 In this course, you can run into both kinds of implementations, depending on the situation. C# is used when we want to know how exactly something is done in said language. Otherwise, if we just want to have the general idea of an algorithm, we will use pseudocode.
+
+## What are data structures
+
+*Data structure* is a data organization, management and organization format, meant to enable efficient access and/or modification of the data it holds. Data structure is a collection of data values, the relationships between them and defines the functions that can be used on said data.
+
+We do not come by data structures in our physical world quite often, but as a loose example, a **cooking book** could be thought of as a data structure: It holds in data (the recipes), it is quite efficient to access (there's an indexed list at the beginning), it has the relations (one recipe might require another), and it defines the functions (you can read a recipe from the book, or even delete by ripping a page off).
+
+Usually, how ever, data structures refer to computer science data structures, such as *arrays*, *lists*, *graphs* and *trees*. We are quite familiar in using the first two, but we shall look into them a bit deeper in this course. The two latter are more complex data structures, but are quite common, and ever so efficient. You will get familiar with them during this course.
+
+## 
