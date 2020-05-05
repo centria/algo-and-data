@@ -250,3 +250,30 @@ int Sum(n)
     s += i
   return s
 ```
+
+### Recursion
+
+We will handle recursion more deeply in this course later, but let's have a quick glance. It is quite often used in algorithm design, and it means that a subprogram calls for itself. Here's an example of recursion in action:
+
+```console
+void Hello(n)
+  if n == 0
+    return
+  else
+    print("Hello!")
+    Hello(n-1)
+```
+
+This subprogram prints the line "Hello" *n times*. For example, the call **Hello(3)** gives the following result:
+
+```
+Hello!
+Hello!
+Hello!
+```
+
+The basic idea is, that if n = 0, the subprogram does not do anything, since there is nothing to print. Otherwise, it will print the line "Hello!" and then call itself with the parameter *n-1*.
+
+Recursion is used quite often, and as said, we will look into it deeper, later on.
+
+With the tools above, we can create *any algorithm possible*. Now it's up to us to *apply our knowledge* of different techniques to different situations.
