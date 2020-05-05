@@ -19,7 +19,7 @@ The course runs for 6 weeks and is worth 3 credits. As one credit is 27 hours, t
 
 The course consists of lectures, which at least in **spring 2020** are held online, in Teams. Each lecture session is 2-3 x 90 minutes or so, depending on the session and the amount of questions from the students. For best learning experience, I encourage you to ask questions, especially if you want to know more of a certain subject.
 
-After the lecture, exercises will be published, and the deadline is before the next week's lecture, unless stated otherwise. The exercises are meant to be done individually, and each student return their own answers. You can, of course, help each other, and I do encourage you to do so. Each student, anyways, returns their own answers. [**More information about the exercises are on the exercise page.**](exercises)
+After the lecture, exercises will be published, and the deadline is before the next week's lecture, unless stated otherwise. The exercises are meant to be done individually, and each student return their own answers. You can, of course, help each other, and I do encourage you to do so. Each student, anyways, returns their own answers. [**More information about the exercises are on the exercise page.**](../exercises)
 
 ## What are algorithms?
 
