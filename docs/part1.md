@@ -259,3 +259,42 @@ The basic idea is, that if n = 0, the subprogram does not do anything, since the
 Recursion is used quite often, and as said, we will look into it deeper, later on.
 
 With the tools above, we can create *any algorithm possible*. Now it's up to us to *apply our knowledge* of different techniques to different situations.
+
+# Designing algorithms
+
+There is no clear recipe on how to design algorithms, but it is rather a skill, which evolves with practice. Here are still some tips to guide you on your way.
+
+## Starting point
+
+It is good to remember, that the tools we went through are enough to create any algorithm:
+
+* variables
+* conditionals
+* loops
+* arrays
+
+This means, that you don't have to know about some sophisticated programming technique to create a certain algorithm. For example, there is no algorithm, which you could not implement without recursion or objects.
+
+## Using time
+
+It is good to acknowledge, that creating an *efficient* algorithm takes time. It can take hours or even days (although, not in one sitting).
+
+An important step in creating algorithms, and any coding for that matter, is errors and learning from them: You might have an idea on how to implement an algorithm, but the idea proves to be wrong. These mis-steps still give you information, even though they do not produce the exact solution.
+
+There might also be an algorithm, which you never solve during this course. It is ok, there are exercises of various difficulty, and even for the highest grade, you only need to get 90% done.
+
+## Design
+
+Most prefer traditional methods in algorithm design. Even though we create our algorithms in (pseudo)code on a computer, using a pen and paper is still a quite valid form of solution solving. You can think yourself as an algorithm: When given an input (the problem you want to solve), how would you start to solve it?
+
+Design often takes a formitable amount of the solution. When you are quite aware, how an algorithm will work, it is nice to implement in code. Some details do of course get clearer while coding.
+
+It is usually *not a good idea* to start coding first, thinking second. Always use some time to design your code.
+
+## Independence
+
+One goal of this course is to gain *independent problem solving skill*. Even though you can ask your friends for help and you can think together, do not copy your answers from one another.
+
+Take into consideration, that learning how to design an algorithm is different than learing the finesse of a coding language. If you want to remember how to convert a string to integer in C#, there's nothing wrong going to the internet and searching for the solution to remind you of how it's done.
+
+In algorithm design, how ever, it is crucial that you spend the time thinking about the solutions yourself. This will increase and evolve your logical thinking, which will in turn enhance your coding abilities. In this course, the journey is truly more imporant than the destination.
