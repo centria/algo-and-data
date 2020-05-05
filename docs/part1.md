@@ -298,3 +298,7 @@ One goal of this course is to gain *independent problem solving skill*. Even tho
 Take into consideration, that learning how to design an algorithm is different than learing the finesse of a coding language. If you want to remember how to convert a string to integer in C#, there's nothing wrong going to the internet and searching for the solution to remind you of how it's done.
 
 In algorithm design, how ever, it is crucial that you spend the time thinking about the solutions yourself. This will increase and evolve your logical thinking, which will in turn enhance your coding abilities. In this course, the journey is truly more imporant than the destination.
+
+## Look for patterns
+
+Usually when we want to find a solution to a mathematical problem, we want to find a pattern in our calculation. For example, printing all of [**Fibonacci numbers**](https://en.wikipedia.org/wiki/Fibonacci_number) under a million can be done with *brute force*, but there are easier and faster ways to do it. When designing an algorithm, try to find a pattern in your calculations, and use that as an advantage.
