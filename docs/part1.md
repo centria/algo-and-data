@@ -11,27 +11,9 @@ In this course, we learn about algorithms and data structures, what they are and
 
 Learning programming is a long process, and it can be divided into two steps. First step is learnt in the course **Basics in Programming**, such as using variables, statements, loops and so on. The second step is to create **efficient** algorithms, a topic we shall look into in this course.
 
-## Why are we here?
+## Why is this necessary?
 
 Even though most of the data structures we will handle on this course have been implemented in some (if not most) coding languages already, for more efficient use it is crucial to understand, how they are built, and what actually happens inside those data structures. Same applies for algorithms: someone, somewhere has probably already done the code you are looking for, but to understand the basics of algorithms is the key to make our own, personal code more efficient.
-
-## How does this course work?
-
-The course runs for 6 weeks and is worth 3 credits. As one credit is 27 hours of work, this means that weekly amount of work is roughly 13 hours. Out of this, about 4 are considered for the lectures (even though they might not last that long), and around 9 for homework.
-
-* The course consists of lectures, which at least in **spring 2020** are held online, in Teams, on **Wednesdays 10 to 15**, including breaks. 
-
-Each lecture session is 2-3 x 90 minutes or so, depending on the session and the amount of questions from the students. For best learning experience, I encourage you to ask questions, especially if you want to know more of a certain subject.
-
-Participation on the lectures is not compulsory, and you should get the same information by reading this course page. The lessons **are recorded**, so you can also view them afterwards.
-
-* After the lecture, exercises will be published, and the deadline is before the next week's lecture, unless stated otherwise. 
-
-The exercises are meant to be done individually, and each student return their own answers. You can, of course, help each other, and I do encourage you to do so. Each student, anyways, returns their own answers. [**More information about the exercises are on the exercise page.**](../exercises) The answers will be handled on the next lecture.
-
-* On **Fridays 10 to 15** an exercise session is open for this course and Design and Documentation course. You can ask questions about the exercises there.
-
-The exercise sessions are held in **Teams**, and are completely voluntary. These sessions **will not** be recorded.
 
 ## What are algorithms?
 
@@ -94,7 +76,7 @@ print(sum)
 
 In this course, you can run into both kinds of implementations, depending on the situation. C# is used when we want to know how exactly something is done in said language. Otherwise, if we just want to have the general idea of an algorithm, we will use pseudocode.
 
-## What are data structures
+## What are data structures?
 
 *Data structure* is a data organization, management and organization format, meant to enable efficient access and/or modification of the data it holds. Data structure is a collection of data values, the relationships between them and defines the functions that can be used on said data.
 
