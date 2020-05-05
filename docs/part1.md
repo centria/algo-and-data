@@ -15,6 +15,10 @@ Learning programming is a long process, and it can be divided into two steps. Fi
 
 Even though most of the data structures we will handle on this course have been implemented in some (if not most) coding languages already, for more efficient use it is crucial to understand, how they are built, and what actually happens inside those data structures. Same applies for algorithms: someone, somewhere has probably already done the code you are looking for, but to understand the basics of algorithms is the key to make our own, personal code more efficient.
 
+The computing world is evolving rapidly as we speak, and we as developers must prepare for it. Even though we stick to the basics (i.e. how to use a single thread to calculate something in one computer's memory), there are challenges around us. 
+
+Most of the computer processors are nowadays multicore, multithreaded, and applications are becoming increasingly so. We have distributed calculation, real-time processing, and yet mobile devices with somewhat limited capacity. To tackle all these, we need to understand, how to manage data in different environments, and how to calculate efficiently.
+
 ## What are algorithms?
 
 *Algorithm*, in its simplest form, is an instruction. With said instruction, we can solve a computational problem. Algorithm is given an **input**, which describes the problem, and it produces an **output**, which is the answer to the given problem. All of us have encountered algorithms in our lives, but probably don't think of them as such. The most common algorithm in daily life is probably a **cooking recipe**. Let's take a look.
