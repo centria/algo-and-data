@@ -89,7 +89,7 @@ We could also represent the algorithm as **pseudocode** instead of an actual cod
 sum = 0
 for each number in list
   sum += number
-print sum
+print(sum)
 ```
 
 In this course, you can run into both kinds of implementations, depending on the situation. C# is used when we want to know how exactly something is done in said language. Otherwise, if we just want to have the general idea of an algorithm, we will use pseudocode.
@@ -102,4 +102,151 @@ We do not come by data structures in our physical world quite often, but as a lo
 
 Usually, how ever, data structures refer to computer science data structures, such as *arrays*, *lists*, *graphs* and *trees*. We are quite familiar in using the first two, but we shall look into them a bit deeper in this course. The two latter are more complex data structures, but are quite common, and ever so efficient. You will get familiar with them during this course.
 
-## 
+## Basic parts of programming
+
+Let's take a quick recap in the basics of programming. Even the most complex algorithms are constructed of the simplest of items. We shall go through some of the basic parts, which form a base for our algorithm design. Meanwhile, we will get to know pseudocode representations of some of the items.
+
+### Variable
+
+```cs
+int a = 5;
+int b = 7;
+int c = a + b;
+```
+
+In pseudocode we use the variables similarly, but don't mark the types:
+
+```console
+a = 5;
+b = 7;
+c = a + b;
+```
+
+### Conditional statement
+
+A conditional statement makes the program's function dependant from for example variable values. The next C# code tells if the variable is even or odd:
+
+```cs
+if (x % 2 == 0)
+{
+  Console.WriteLine("even");
+}
+else 
+{
+  Console.WriteLine("odd");
+}
+```
+
+In pseudocode, it could look like
+
+```console
+if x % 2 == 0
+  print("even")
+else
+  print("odd")
+```
+
+### Loop
+
+Loop repeats the code inside it. Common loops are *for-loop* for certain set of values, and *while-loop*, which loops as long as the condition is true. For example, the following C# code prints numbers from 1 to 100:
+
+```cs
+for (int i = 1; i <= 100; i++)
+{
+  Console.WriteLine(i);
+}
+```
+
+Same in pseudocode:
+
+```console
+for i = 1 to 100
+  print(i)
+```
+
+The following code prints positive numbers, starting from *x* and and halves them with each step:
+
+```cs
+while (x >= 1)
+{
+  Console.WriteLine(x);
+  x /= 2;
+}
+```
+
+For example, with x = 50, the code will print 50, 25, 12, 6, 3, 1. And in pseudocode the same code is 
+
+```console
+while x >= 1
+  print(x)
+  x /= 2
+```
+
+### Array
+
+Array is (one of) the most basic data structures in computer science. An array has *n* elements, indexed *from 0 to n-1*. This means that an array of size 3, has indexes 0, 1 and 2.
+
+As an example, here's an array that can hold 5 integers, and we add two integers to it:
+
+```cs
+int[] numbers = new int[5];
+numbers[0] = 4;
+numbers[3] = 2;
+```
+
+In pseudocode we use array very similarly, but we do not usually initialize it in our code, we can assume such an array exists:
+
+```console
+numbers[0] = 4;
+numbers[3] = 2;
+```
+
+An array is an excellent data structure, but it has two weaknesses:
+1. You cannot change the size of an array after once defining it.
+2. Finding a speficic element from an array is quite slow.
+
+Array is still quite an important data structure, as for example the computer's memory is based on array-like structures. Thus any other data structure can be implemented using an array.
+
+### Subprogram
+
+Subprogram is a named part of a program, which can be called with parameters. A subprogram has multiple names, depending on the coding language, and in C# it is called a *method*.
+
+For example:
+
+```cs
+void Print(int n)
+{
+  for (int i = 1; i <= n; i++)
+  {
+    Console.WriteLine(i);
+  }
+}
+```
+
+```console
+void Print(n)
+  for i = 1 to n
+    print(1)
+```
+
+Or, to calculate a sum for numbers from 1 to *n*:
+
+```cs
+int Sum (int n)
+{
+  int s = 0;
+  for (int i = 1; i <= n; i++) 
+  {
+    s += i;
+  }
+  return s;
+}
+```
+
+```console
+int Sum(n)
+  s = 0
+  for i = 1 to n
+    s += i
+  return s
+```
