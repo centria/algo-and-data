@@ -17,7 +17,7 @@ Even though most of the data structures we will handle on this course have been 
 
 ## How does this course work?
 
-The course runs for 6 weeks and is worth 3 credits. As one credit is 27 hours, this means that weekly amount of work is around 15 hours. Out of this 15, 5 are considered for the lectures (even though they might not last that long), and around 10 for homework.
+The course runs for 6 weeks and is worth 3 credits. As one credit is 27 hours of work, this means that weekly amount of work is roughly 13 hours. Out of this, about 4 are considered for the lectures (even though they might not last that long), and around 9 for homework.
 
 * The course consists of lectures, which at least in **spring 2020** are held online, in Teams, on **Wednesdays 10 to 15**, including breaks. 
 
