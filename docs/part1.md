@@ -103,9 +103,9 @@ int c = a + b;
 In pseudocode we use the variables similarly, but don't mark the types:
 
 ```console
-a = 5;
-b = 7;
-c = a + b;
+a = 5
+b = 7
+c = a + b
 ```
 
 ### Conditional statement
@@ -212,7 +212,7 @@ void Print(int n)
 ```console
 void Print(n)
   for i = 1 to n
-    print(1)
+    print(i)
 ```
 
 Or, to calculate a sum for numbers from 1 to *n*:

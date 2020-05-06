@@ -91,6 +91,8 @@ Console.WriteLine(t.Calculate(new int[] {5})); // 5
 Console.WriteLine(t.Calculate(new int[] {4,2,9,1,9,2,5})); // 323
 ```
 
+HINT! You might want to try recursion. You can do this without it as well, but this is a good chance to try it out!
+
 ### Exercise 4
 
 *This exercise is worth 2 points.*
