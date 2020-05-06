@@ -51,7 +51,7 @@ A *substring* is a string, that is part of another string. For example, in strin
 
 * With C#, create a class **Substrings**, which has the following method:
 
-* **int Calculate(string a, string b)**, which calculates how many times a substring *a* can be found from the string *a*. For example:
+* **int Calculate(string a, string b)**, which calculates how many times a substring *b* can be found from the string *a*. For example:
 
 ```cs
 int Calculate(string a, string b)
@@ -76,7 +76,7 @@ As a parameter, give the program an array with integers. With each step, form a 
 
 * Create a class called **Tables**, which has the following method:
 
-* **int Calculate(int[] t)**, which returns the final array with only one element
+* **int Calculate(int[] t)**, which returns the value of the last element (an integer, not the whole array).
 
 Limits: 
 * An array has a maximum of 20 elements
@@ -98,7 +98,7 @@ Console.WriteLine(t.Calculate(new int[] {4,2,9,1,9,2,5})); // 323
 An integer is a lucky number, if every number in it is either 3 or 7. For example, 3, 7, 33, 37, 73, 77, and 733737 are lucky numbers. Your assigment is to calculate lucky numbers between a...b.
 
 * Create a class **LuckyNumbers**, with the following method:
-* **int Calculate(int a, int b)**, which return the amount of lucky numbers between two integers.
+* **int Calculate(int a, int b)**, which returns the amount of lucky numbers between two integers.
 
 The following code represents the usage of the class:
 
