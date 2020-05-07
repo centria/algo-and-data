@@ -73,9 +73,9 @@ The code should work as follows:
 
 ```cs
 Substrings subs = new Substrings();
-subs.Calculate("aybabtu", "bab"); // 1
-subs.Calculate("aaaaa", "aa"); // 4
-subs.Calculate("monkey", "banana"); // 0
+Console.WriteLine(subs.Calculate("aybabtu", "bab")); // 1
+Console.WriteLine(subs.Calculate("aaaaa", "aa")); // 4
+Console.WriteLine(subs.Calculate("monkey", "banana")); // 0
 ```
 
 ### Exercise 3
