@@ -40,7 +40,7 @@ The exercise sessions are held in **Teams**, and are completely voluntary. These
 ## Grading
 
 * Due to public demand, the grading has been changed and clarified a bit.
-* The course tasks consist of weekly(ish) exercises. They are all graded, usually 1 point per exercise (more points per larger/more difficult exercise). Each week will have roughly 10 points (some might have 8, some 12), so **30 points in total**.
+* The course tasks consist of weekly(ish) exercises. They are all graded, usually 2 points per exercise (more points per larger/more difficult exercise). Each week will have roughly 10 points (some might have 8, some 12), so **30 points in total**.
 * A student must get at least 30 points in total to pass the course, and 54 to get a grade 5.
 
 |Points | Grade |
