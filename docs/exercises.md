@@ -65,9 +65,7 @@ A *substring* is a string, that is part of another string. For example, in strin
 int Calculate(string a, string b)
 ```
 
-Limits:
- * Each string can be from 1 to 100 characters
- * All the characters are from a to z (non-capital)
+* All the characters are from a to z (non-capital)
 
 The code should work as follows:
 
@@ -85,10 +83,6 @@ As a parameter, give the program an array with integers. With each step, form a 
 * Create a class called **Tables**, which has the following method:
 
 * **int Calculate(int[] t)**, which returns the value of the last element (an integer, not the whole array).
-
-Limits: 
-* An array has a maximum of 20 elements
-* Each element is between 1...100
 
 The class should work as follows.
 
