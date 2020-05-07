@@ -9,7 +9,7 @@ published: true
 
 * Each student is to create a git repository and send a link to that repository to the teacher before the first deadline, via email, or in Slack private message. **DO NOT SHARE YOUR REPOSITORIES WITH EACH OTHER**, even though they can be left public.
 
-* Submission of the exercises is done by having the solutions as a code (or pseudocode) in the repository. *The required coding language is marked in the exercises.*
+* Submission of the exercises is done by having the solutions as a code (or pseudocode) in the repository. *All the exercises are supposed to be done in C#, but you can get points for pseudocode solution.*
 
 * The exercises need to be **clearly marked**. Create a separate class (and file) for all the exercises in one part, so you can try them out in a single Main.
   * [**Example for structure can be found here**](https://github.com/HeikkiHei/algo-examples), and you can use it as a template if you want.
@@ -25,10 +25,18 @@ published: true
 
 * If some parts are combined together, the *first* deadline will be the one to follow, and the rest of the deadlines are moved earlier, accordingly. The changes will be updated here in advance.
 
+## Grading
+
+* Each C# exercise is worth 2 or 4 points (2, unless stated otherwise). To get all the points, **you must solve the problem in C#**.
+* To get half of the points, you can show your work and idea in *pseudocode* instead of C#. This way, even though your code does not work, but you know how the algorithm should work, you can still get points.
+* In larger exercises (worth 4 points), you can get 1 to 3 points, even if you miss some part of C# code, but can show that you understand the problem and can produce the pseudocode, even if the code itself would be too difficult.
+* The main idea is not to learn how to code, you should have learnt that already. Now it's time to activate your brain and design algorithms.
+
 ## Part 1 - Introduction
 
 * Deadline **12.5.2020 at 23:59**
-* All the exercises in this part require C#
+* All the exercises are meant to be written in C#
+  * You can get points for pseudocode, if you properly show your work.
 
 ### Exercise 1
 
@@ -95,7 +103,7 @@ HINT! You might want to try recursion. You can do this without it as well, but t
 
 ### Exercise 4
 
-*This exercise is worth 2 points.*
+*This exercise is worth 4 points.*
 
 An integer is a lucky number, if every number in it is either 3 or 7. For example, 3, 7, 33, 37, 73, 77, and 733737 are lucky numbers. Your assigment is to calculate lucky numbers between a...b.
 
