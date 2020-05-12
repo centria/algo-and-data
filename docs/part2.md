@@ -21,7 +21,7 @@ It could be stated that an algorithm is *good*, when it can deliver a quick answ
 
 We will use this notation in our following examples. This is a very common notation method, and learning it is the main issue of this part.
 
-## Time Complexity
+# Time Complexity
 
 The efficiency of an algorithm is determined by how many operations it takes to run. Our goal now is to estimate the the *amount of operations* in relation to the size of the input *n*. For example, if we had an array for input, *n* would be the size of the array, and if the input would be a string, *n* is the length of said string.
 
@@ -140,4 +140,202 @@ In this case, each method call produces two more calls, so the method is called 
 
 times. Each call takes *O(1)* time, so the time complexity is *O(2^n)*.
 
-### Common time complexities
+## Common time complexities
+
+Certain time complexities are often found in algorithms. Let's go through a fex of these.
+
+### Constant time, O(1) 
+
+*Constant time* algorithm runs a constant amount of operations, and the size of the input does not affect the speed. For example, the following calculation counts the sum for *1 + 2 + ... + n* in constant time.
+
+```console
+sum = n*(n+1)/2
+```
+
+### Logarithmic, O(log n)
+
+*Logarithmic* algorithm often halves the input size on each operation. For example, the time complexity of the following is *O(log n)*.
+
+```console
+counter = 0
+while n >= 1
+  counter += 1
+  n /= 2
+```
+
+An important issue with logarithms is, that log *n* is a *small* number, when *N* is any typical number in an algorithm. For example *log 10^6 ~ 20* and *log 10^9 ~ 30*, when the base of the logarithm is 2. Thus when an algorithm does something in logarithmic time, it does not take very long.
+
+### Linear, O(n)
+
+*Linear* algorithm can go through the input with a fixed amount of operations. For example the next *O(n)* algorithm counts the sum of the elements in an array.
+
+```console
+sum = 0
+for i = 0 to n-1
+  sum += array[i]
+```
+
+When the input is a data set with *n* elements, linear time complexity is often the best possible we can achieve. This is because the algorithm must go through the whole data set, before it can give us an output.
+
+### (Sorting), O(n log n)
+
+Time complexity of *O(n log n)* often refers to having *sorting* as part of the algorithm, as efficient sorting algorithms use *O(n log n)* time. For example, the following *O(n log n)* time complexity algorithm checks, if the array has two recurring elements.
+
+```console
+sort(array)
+same = false
+for i = 1 to n-1
+  if array[i] == array[i-1]
+  same = true
+```
+
+First, the algorithm sorts the array, after which the recurring elements are next to each other, and easy to find. Sorting takes time *O(n log n)* and the loop takes *O(n)*, so combined the algorithm takes time *O(n log n)*.
+
+### Quadratic, O(n^2)
+
+*Quadratic* algorithm can go through all the possible ways of selecting two elements from the input. For example, the next O(n^2) algorithm searches for two elements, whose sum is *x*.
+
+```console
+ok = false
+for i = 0 to n-1
+  for j = i+1 to n-1
+    if array[i] + array[j] == x
+      ok = true
+```
+
+### Cubic, O(n^3)
+
+*Cubic* algorithm can go through all the possible combinations of three elements in the input. For example, the next algorithm searches for three numbers with the sum of *x*, and has time complexity of O(n^3)*
+
+```console
+ok = false
+for i = 0 to n-1
+  for j = i+1 to n-1
+    for k = j+1 to n-1
+      if array[i] + array[j] + array[k] == x
+        ok = true
+```
+
+### (subsets and permutations), O(2^n) and O(n!)
+
+If the time complexity is *O(2^n)*, this often tells us that the algorithm goes through subsets of the elements of the input. This also means that the growth doubles with each addition to the input data set. For example, the recursive calculation of Fibonacci numbers.
+
+```console
+int fibonacci(input)
+  if input <= 1
+    return input;
+  return fibonacci(input - 2) + fibonacci(input - 1);
+```
+
+If the time complexity is *O(n!)*, the algorithm probably goes through the permutations of the elements from the input. The *!* in mathematical notation means *factorial*. For example, the factorial *5!* could be written as *5 * 4 * 3 * 2 * 1*. Our code example prints the numbers from input *n* in factorial manner.
+
+```console
+void factorial(n)
+  for i = 0 to n
+    print(n)
+    factorial(n-1)
+```
+
+## Estimating efficiency
+
+Why is it useful to define the time complexity of an algorithm? The benefit is, that the time complexity gives us an estimate of how *good* our algorithm is, or how well it can handle large inputs efficently. With more experience on algorithm design, we can get a clear picture what different time complexities mean in action.
+
+We can get some idea by looking at this table:
+
+|Size of the input | Required time complexity|
+|--:|--:|
+| 10 | O(n!) |
+| 20 | O(2^n) |
+| 500 | O(n^3) |
+| 5000 | O(n^2) |
+| 10^6 | O(n) or O(n log n) |
+| large | o(1) or O(log n) |
+
+Time complexity gives us a compact representation of efficiency. We do not have to know the details of an algorithm to get the general idea of efficiency. One interesting aspect to algorithm efficiency, is how large of an input it can handle *fast* (in fractions of a second). This is a good requirement, when we want to use our algorithm in some proper use. 
+
+The table above gives us a ball park estimate of the sufficient time complexities, when done with a modern language on a modern computer. Keep in mind, that these are only estimates, and the real use of time can be affected by multiple reasons. The same algorithm done well can be multiple times faster than a bad version, and also the coding language itself can affect the result.
+
+
+
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
+
+### A small example
+
+You can use multiple different types of algorithms to solve a problem. Next we'll look into a single task with two different algorithms. The first one is a *brute force solution*, working in *O(n^2)* time. The second one is an efficient algorithm, working in *O(n)* time.
+
+The example as follows: The input is a string with length of *n* and each character (or element) is either 0 or 1. We want to calculate, how many different ways we can choose two parts of the input so, that the left character is 0 and the right character is 1. For example, in an input of 01001 we can find four ways for this selection:
+**01**001, **0**100**1**, 01**0**0**1** and 010**01**.
+
+### O(n^2) algorithm
+
+We can solve the problem with brute force by going through each possible way to choose the left and right element. This way we can calculate one by one, how many ways the left character is 0 and the right is 1. The following code implements this algorithm:
+
+```console
+counter = 0
+for i = 0 to n-1
+  for j = 0 to n-1
+    if chars[i] == 0 and chars[j] == 1
+      counter += 1
+print(counter)
+```
+
+The time complexity for this algorithm is O(n^2), since it has two indented loops, which go through the input.
+
+### O(n) algorithm
+
+Let's see if we can do this more efficiently. We need to find a way to get rid of the second loop from our algorithm. For this we should look at the problem from a different angle. When we are at a certain point of the string, in how many ways can we form a pair, whose right character is at our current location? If our current location points to a 0, there are no possible pairs, but if the character is 1, we can choose *which ever* zero which is left to our position to create a pair.
+
+With this observation we only need to go through the string once from left to right and keep track, how many 0's we have seen. At each character of 1 we increase the answer by the amount of zeros so far. The following code implements the algorithm:
+
+```console
+counter = 0
+zeros = 0
+for i = 0 to n-1
+  if chars[i] == 0
+    zeros += 1
+  else
+    counter += zeros
+print(counter)
+```
+
+### Comparing the algorithms
+
+We now have two algorithms, whose time complexities are *O(n^2)* and *O(n)*, but what does this mean in practice? We can find this out by creating the algorithms with an actual coding language and measuring their running times with different sizes of inputs. This will be done as an exercise.
+
+# Space complexity
+
+Time complexity is not the only aspect we should be interested in algorithms, when we are speaking about efficiency. Another key feature is *space complexity*.
+
+Space complexity is used to describe, how much memory space an algorithm uses *in addition* to the input. If the space complexity is *O(1)*, algorithm needs space only for few variables. At a space complexity of *O(n)*, algorithm could have for example a temporary array the size of the original input.
+
+Let's look at an example, where an array has the numbers 1, 2, ... ,n, par one, and our task is to determine the missing number. One way to solve this in time *O(n)* is to create a temporary array, which keeps track of the numbers included. The space complexity of such solution is *O(n)*, because the extra array takes *O(n)* amount of space.
+
+```console
+for i = 0 to n-2
+  included[array[i]] = true
+for i = 1 to n
+  if not included[i]
+    missing = i
+```
+
+There is another solution to this, whose time complexity is still O(n), but the space complexity is only O(1). This kind of an algorithm first calculates the sum of the numbers from 1 to n, and then substracts the elements from the array from it. The remainder is the value equal to the missing number.
+
+```console
+sum = 0
+for i = 1 to n
+  sum += i
+for i = 0 to n-1
+  sum -= array[i]
+missing = sum
+```
+
+Notice, that instead of variables and arrays, *recursion* can also take up space, since all the information of recursive subprogram calls are in a recursion stack in memory. For example, the following method has a space complexity of *O(n)*, because there is at most *n* layers of recursive calls in the memory.
+
+```console
+int f(n)
+  if n == 1
+    return
+  f(n-1)
+```
+
+In practice, space complexity does not play a major role in algorithms, since if the algorithm is *efficient*, it does not have the time to use up much memory. Especially, the space complexity can not be greater than time complexity. Thus we do not have to worry about space complexity as mcuh, but we can focus on creating algorithms which are fast and efficient, and compare the time complexity of different solutions.
