@@ -7,7 +7,7 @@ published: true
 
 # Efficiency
 
-While designing algorithms, our aim is to create *effcient* algorithms. We want to create algorithms with which we can handle large amounts of date without using a large amount of time. We had a glimpse of that in the last exercise for the previous part.
+While designing algorithms, our aim is to create *efficient* algorithms. We want to create algorithms with which we can handle large amounts of date without using a large amount of time. We had a glimpse of that in the last exercise for the previous part.
 
 It could be stated that an algorithm is *good*, when it can deliver a quick answer, even though we would *input* a large amount of data for it. In this part, we will concentrate on how to estimate the efficiency of algorithms, and how to possibly improve some algorithms in the means of efficiency.
 
