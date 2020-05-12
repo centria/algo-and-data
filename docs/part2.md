@@ -17,7 +17,7 @@ It could be stated that an algorithm is *good*, when it can deliver a quick answ
 
 *"Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.*
 
-*In computer science, big O notation is used to classify algorithms according to how their run time or space requirements grow as the input size grows."*[**Wikipedia**](https://en.wikipedia.org/wiki/Big_O_notation)
+*In computer science, big O notation is used to classify algorithms according to how their run time or space requirements grow as the input size grows."* [**Wikipedia**](https://en.wikipedia.org/wiki/Big_O_notation)
 
 We will use this notation in our following examples. This is a very common notation method, and learning it is the main issue of this part.
 
@@ -339,3 +339,5 @@ int f(n)
 ```
 
 In practice, space complexity does not play a major role in algorithms, since if the algorithm is *efficient*, it does not have the time to use up much memory. Especially, the space complexity can not be greater than time complexity. Thus we do not have to worry about space complexity as mcuh, but we can focus on creating algorithms which are fast and efficient, and compare the time complexity of different solutions.
+
+[**Exercises here**](https://centria.github.io/algo-and-data/exercises/#part-2---time-complexity)

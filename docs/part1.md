@@ -306,3 +306,5 @@ In algorithm design, how ever, it is crucial that you spend the time thinking ab
 ## Look for patterns
 
 Usually when we want to find a solution to a mathematical problem, we want to find a pattern in our calculation. For example, printing all of [**Fibonacci numbers**](https://en.wikipedia.org/wiki/Fibonacci_number) under a million can be done with *brute force*, but there are easier and faster ways to do it. When designing an algorithm, try to find a pattern in your calculations, and use that as an advantage.
+
+[**Exercises here**](https://centria.github.io/algo-and-data/exercises/#part-1---introduction)
