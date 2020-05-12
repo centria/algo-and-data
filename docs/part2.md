@@ -42,11 +42,11 @@ We say that an algorithm takes *O(f(n))* time, or its *time complexity* is *O(f(
 
 As our algorithm above always does a maximum of 4 operations, per each element in the array of the size *n*, we get the *worst-case scenario* of a maximum of *4 times n operations*. To place these in our notation *O(cf(n))*, we acknowledge that *c = 4*, and *f(n)* is the function over *n*. This way we get *O(4n)* as our very worst case complexity, and simplify to *O(n)* as our time complexity.
 
-### Calculating Big O
+## Calculating Big O
 
 Nice thing about time complexity is that we can usually deduct it simply by looking at the structure of an algorithm. Next we'll be looking at some calculation methods, which make this possible.
 
-#### Single operations
+### Single operations
 
 If the code does not have loops but only single operations, the time complexity is *O(1)*. For example:
 
@@ -58,7 +58,7 @@ if >= 0
 
 Even though we go through three commands, i.e. we have *c = 3*, the notation is still O(1), as each command is run only once.
 
-#### Loops
+### Loops
 
 We will mark *...* for code, which uses O(1) time. If code has only one loop which takes *n* operations, the time complexity is *O(n)*.
 
@@ -89,7 +89,7 @@ for i = 1 to n - 1
   ...
 ```
 
-#### Operations after each other
+### Operations after each other
 
 If the code includes multiple sections, the time complexity is that of the largest time complexity. For example, the following code has a time complexity of *O(n^2)*, because the time complexities of its parts are *O(n)*, *O(n^2)* and *O(n)*.
 
@@ -103,7 +103,7 @@ for i = 1 to n
   ...
 ```
 
-#### Multiple variables
+### Multiple variables
 
 Sometimes the time complexity is dependant on multiple factors, and the formula will have multiple variables. For example, the next time complexity is *O(nm)*
 
@@ -113,4 +113,31 @@ for i = 1 to n
     ...
 ```
 
-#### Rekursive algorithms
+### Rekursive algorithms
+
+For a recursive algorithm we calculate how many recursive calls are made, and how many operations a single call takes. Let's see the next method, which is called with a parameter *n*.
+
+```console
+int function(n)
+  if n == 1
+    return
+  function(n-1)
+```
+
+The method is called *n* times and all the calls take *O(1)* time. We get the time complexity by multiplying these values together, so the method has a time complexity of *O(n)*. Let's take a look at another example.
+
+```console
+int g(n)
+  if n == 1
+    return
+  g(n-1)
+  g(n-1)
+```
+
+In this case, each method call produces two more calls, so the method is called in total
+
+1 + 2 + 4 + ... 2^(n-1) = 2^n -1 
+
+times. Each call takes *O(1)* time, so the time complexity is *O(2^n)*.
+
+### Common time complexities
