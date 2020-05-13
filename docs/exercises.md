@@ -217,6 +217,8 @@ Console.WriteLine(p.Calculate(new int[] {1,2,3,4,5})); // 1
 Console.WriteLine(p.Calculate(new int[] {1,1,1,1,1})); // 5
 ```
 
+* You should be able to do this in *O(n)* to get all the points.
+
 ### Exercise 3
 
 * You are given an array with *n* integers. You want to change the array, so that no number is repeated after one another. On each step, you can change any number from the array to be something else. What is the smallest amount of steps?
@@ -235,6 +237,7 @@ Console.WriteLine(m.Calculate(new int[] {1,2,3,4,5})); // 0
 Console.WriteLine(m.Calculate(new int[] {1,1,1,1,1})); // 2
 ```
 
+* You should be able to do this in *O(n)* to get all the points.
 
 ### Exercise 4
 
@@ -255,6 +258,7 @@ Console.WriteLine(m.Calculate(new int[] {1,2,3,4,5})); // 1
 Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
 ```
 
+* You should be able to do this in *O(n)* to get all the points.
 
 ### Exercise 5
 
@@ -280,6 +284,8 @@ Console.WriteLine(s.Calculate(new int[] {1,2,-1,4,0})); // 1
 Console.WriteLine(s.Calculate(new int[] {1,2,3,4,5})); // 0
 Console.WriteLine(s.Calculate(new int[] {0,0,0,0,0})); // 4
 ```
+
+* You should be able to do this in *O(n)* to get all the points.
 
 ## Part 3 - Recursion
 
