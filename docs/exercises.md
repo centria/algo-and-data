@@ -203,11 +203,83 @@ This code is of time efficiency O(n). If you have a more efficient way to do it,
 
 ### Exercise 2
 
+* You are given an array with *n* integers. Your task is to calculate, how long is the longest section of recurring numbers in the array.
+
+* Create a class **LongestRepetition**, with the following method:
+* **int Calculate(int[] t)**, which returns the length of the longest repetition
+
+The following code represents the behavior:
+
+```cs
+LongestRepetition p = new LongestRepetition();
+Console.WriteLine(p.Calculate(new int[] {1,2,1,1,2})); // 2
+Console.WriteLine(p.Calculate(new int[] {1,2,3,4,5})); // 1
+Console.WriteLine(p.Calculate(new int[] {1,1,1,1,1})); // 5
+```
+
 ### Exercise 3
+
+* You are given an array with *n* integers. You want to change the array, so that no number is repeated after one another. On each step, you can change any number from the array to be something else. What is the smallest amount of steps?
+
+* For example, in array \[1,1,2,2,2\] the smallest amount of moves is 2. One solution would be to change the array to be \[1,3,2,1,2\].
+
+* Create a class **Changes** with the following method:
+* **int Calculate(int[] t)**, which returns the smallest amount of changes.
+
+The following code represents the behavior:
+
+```cs
+Changes m = new Changes();
+Console.WriteLine(m.Calculate(new int[] {1,1,2,2,2})); // 2
+Console.WriteLine(m.Calculate(new int[] {1,2,3,4,5})); // 0
+Console.WriteLine(m.Calculate(new int[] {1,1,1,1,1})); // 2
+```
+
 
 ### Exercise 4
 
+* You are given an array with all the integers *1...n* exactly once. You want to collect the integers from smallest to largest, taking one or more *revolutions* in the array. With each revolution, you will traverse the array from left to right and pick as many as possible integers in order. How many revolutions do you do in total?
+
+* For example, in array \[4,1,3,2,5\] the amount of revolutions is three, because on the first revolution you pick up 1 and 2, next revolution 3 and on the third one you pick up 4 and 5.
+
+* Create a class **Revolutions** with the following method:
+
+* **int Calculate(int[] t)**, which returns the amount of revolutions.
+
+The following code represents the behavior:
+
+```cs
+Revolutions r = new Revolutions();
+Console.WriteLine(m.Calculate(new int[] {4,1,3,2,5})); // 3
+Console.WriteLine(m.Calculate(new int[] {1,2,3,4,5})); // 1
+Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
+```
+
+
 ### Exercise 5
+
+* You are given an array with *n* integers. In how many ways can you split the array into left and right subarrays in such a way, that the sum of each part are equal?
+
+* For example in array \[1,2,-1,4,0\] all the possible ways to split it are:
+  * \[1\] and \[2,-1,4,0\]
+  * \[1,2\] and \[-1,4,0\]
+  * \[1,2,-1\] and \[4,0\]
+  * \[1,2,-1,4\] and \[0\]
+
+* In this array the correct answer is 1, as the sums of left and right side are equal only with \[1,2\] and \[-1,4,0\]. Now the sum of both sides is 3.
+
+* Create a class *Split* with the following method:
+
+* * **int Calculate(int[] t)**, which returns the amount of possible ways.
+
+The following code represents the behavior:
+
+```cs
+Split s = new Split();
+Console.WriteLine(s.Calculate(new int[] {1,2,-1,4,0})); // 1
+Console.WriteLine(s.Calculate(new int[] {1,2,3,4,5})); // 0
+Console.WriteLine(s.Calculate(new int[] {0,0,0,0,0})); // 4
+```
 
 ## Part 3 - Recursion
 
