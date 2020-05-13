@@ -9,7 +9,7 @@ published: true
 
 * Each student is to create a git repository and send a link to that repository to the teacher before the first deadline, via email, or in Slack private message. **DO NOT SHARE YOUR REPOSITORIES WITH EACH OTHER**, even though they can be left public.
 
-* Submission of the exercises is done by having the solutions as a code (or pseudocode) in the repository. *All the exercises are supposed to be done in C#, but you can get points for pseudocode solution.*
+* Submission of the exercises is done by having the solutions as a code (or pseudocode) in the repository. *All the exercises are supposed to be done in C#, but you can get some points for pseudocode solution.*
 
 * The exercises need to be **clearly marked**. Create a separate class (and file) for all the exercises in one part, so you can try them out in a single Main.
   * [**Example for structure can be found here**](https://github.com/HeikkiHei/algo-examples), and you can use it as a template if you want.
@@ -21,7 +21,7 @@ published: true
 * Submissions are done *by pushing to your personal repository*. The first submission requires submitting the link to the teacher.
 
 * Answers will be gone through at the beginning of the next lesson, after deadline. 
-  * After the last deadline, as there is no lesson, all the answers will be published here.
+  * After the last deadline, as there is no lesson, **all** the answers will be published here.
 
 * If some parts are combined together, the *first* deadline will be the one to follow, and the rest of the deadlines are moved earlier, accordingly. The changes will be updated here in advance.
 
@@ -123,6 +123,10 @@ HINT! Do not go through all the numbers, it is very inefficient. Try to find a m
 
 ### Exercise 1
 
+
+"The example as follows: The input is a string with length of *n* and each character (or element) is either 0 or 1. We want to calculate, how many different ways we can choose two parts of the input so, that the left character is 0 and the right character is 1. For example, in an input of 01001 we can find four ways for this selection:
+**01**001, **0**100**1**, 01**0**0**1** and 010**01**."
+
 Time efficiency O(n^2)
 
 ```console
@@ -166,7 +170,7 @@ Console.WriteLine("Time this took: " + end.Subtract(start));
 
 In the end.
 
-* To test both of the solutions, create inputs with 10, 100, 1000 and 10000 characthers in input. You can create the input characters with for example the following code:
+* To test both of the solutions, create inputs with 10, 100, 1000 and 10000 (and 1000000, if you want) characthers in input. You can create the input characters with for example the following code:
 
 ```cs
 // using System.Text
@@ -200,6 +204,7 @@ This code is of time efficiency O(n). If you have a more efficient way to do it,
 
 * Add the results in such a detail, that all the results show at least something, i.e. just 1000th of a second might not be enough detail.
 
+* You might want to save the file in the part2 folder of your repository, or use the README.md file at the root.
 
 ### Exercise 2
 
@@ -218,6 +223,7 @@ Console.WriteLine(p.Calculate(new int[] {1,1,1,1,1})); // 5
 ```
 
 * You should be able to do this in *O(n)* to get all the points.
+  * You can get some points for *O(n^2)*
 
 ### Exercise 3
 
@@ -238,6 +244,7 @@ Console.WriteLine(m.Calculate(new int[] {1,1,1,1,1})); // 2
 ```
 
 * You should be able to do this in *O(n)* to get all the points.
+  * You can get some points for *O(n^2)*
 
 ### Exercise 4
 
@@ -259,6 +266,7 @@ Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
 ```
 
 * You should be able to do this in *O(n^2)* to get all the points.
+  * No points awarded for worse solutions.
 
 ### Exercise 5
 
@@ -274,7 +282,7 @@ Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
 
 * Create a class **Split** with the following method:
 
-* * **int Calculate(int[] t)**, which returns the amount of possible ways.
+* **int Calculate(int[] t)**, which returns the amount of possible ways.
 
 The following code represents the behavior:
 
@@ -286,6 +294,7 @@ Console.WriteLine(s.Calculate(new int[] {0,0,0,0,0})); // 4
 ```
 
 * You should be able to do this in *O(n)* to get all the points.
+  * You can get some points for *O(n^2)*
 
 ## Part 3 - Recursion
 

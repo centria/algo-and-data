@@ -52,7 +52,7 @@ If the code does not have loops but only single operations, the time complexity 
 
 ```console
 c = a + b
-if >= 0
+if c >= 0
   print(c)
 ```
 
@@ -142,7 +142,7 @@ times. Each call takes *O(1)* time, so the time complexity is *O(2^n)*.
 
 ## Common time complexities
 
-Certain time complexities are often found in algorithms. Let's go through a fex of these.
+Certain time complexities are often found in algorithms. Let's go through a few of these.
 
 ### Constant time, O(1) 
 
@@ -249,7 +249,7 @@ We can get some idea by looking at this table:
 | 500 | O(n^3) |
 | 5000 | O(n^2) |
 | 10^6 | O(n) or O(n log n) |
-| large | o(1) or O(log n) |
+| large | O(1) or O(log n) |
 
 Time complexity gives us a compact representation of efficiency. We do not have to know the details of an algorithm to get the general idea of efficiency. One interesting aspect to algorithm efficiency, is how large of an input it can handle *fast* (in fractions of a second). This is a good requirement, when we want to use our algorithm in some proper use. 
 
