@@ -121,6 +121,94 @@ HINT! Do not go through all the numbers, it is very inefficient. Try to find a m
 
 * Deadline 19.5. at 23:59
 
+### Exercise 1
+
+Time efficiency O(n^2)
+
+```console
+counter = 0
+for i = 0 to n-1
+  for j = 0 to n-1
+    if chars[i] == 0 and chars[j] == 1
+      counter += 1
+print(counter)
+```
+
+Time efficiency O(n)
+
+```console
+counter = 0
+zeros = 0
+for i = 0 to n-1
+  if chars[i] == 0
+    zeros += 1
+  else
+    counter += zeros
+print(counter)
+```
+
+* Above you see two algorithms to a same problem, as introduced in the material. Create these solutions in C#.
+
+* Measure the time taken for both algorithms. 
+
+You can do it by adding 
+
+```cs
+DateTime start = DateTime.Now;
+```
+
+In the beginning of the algorithm and
+
+```cs
+DateTime end = DateTime.Now;
+Console.WriteLine("Time this took: " + end.Subtract(start));
+```
+
+In the end.
+
+* To test both of the solutions, create inputs with 10, 100, 1000 and 10000 characthers in input. You can create the input characters with for example the following code:
+
+```cs
+// using System.Text
+
+public string CreateInput(int n)
+{
+  StringBuilder sb = new StringBuilder();
+  Random random = new Random();
+  for (int i = 0; i < n; i++)
+  {
+    sb.Append(random.Next(0, 2).ToString());
+  } 
+  return input;
+}
+```
+
+This code is of time efficiency O(n). If you have a more efficient way to do it, feel free to use it, and do share that code!
+
+* DO NOT include the include the input creation time in the efficiency calculation!
+
+* Save the results of your outputs to a file, clearly marking the size of the input, which algorithm you used, and how long it took. You can use this kind of a table, for example, in an MD file:
+
+```md
+| Input size | O(n^2)  | O(n)    |
+|:----------:|:-------:|:-------:|
+| 10         | 0.000 s | 0.000 s |
+| 100        | 0.000 s | 0.000 s |
+| 1000       | 0.000 s | 0.000 s |
+| 10000      | 0.000 s | 0.000 s |
+```
+
+* Add the results in such a detail, that all the results show at least something, i.e. just 1000th of a second might not be enough detail.
+
+
+### Exercise 2
+
+### Exercise 3
+
+### Exercise 4
+
+### Exercise 5
+
 ## Part 3 - Recursion
 
 * Deadline 26.5. at 23:59
