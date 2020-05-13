@@ -185,7 +185,7 @@ public string CreateInput(int n)
 
 This code is of time efficiency O(n). If you have a more efficient way to do it, feel free to use it, and do share that code!
 
-* DO NOT include the include the input creation time in the efficiency calculation!
+* DO NOT include the input creation time in the efficiency calculation!
 
 * Save the results of your outputs to a file, clearly marking the size of the input, which algorithm you used, and how long it took. You can use this kind of a table, for example, in an MD file:
 
