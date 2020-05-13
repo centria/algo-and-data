@@ -268,7 +268,7 @@ Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
 
 * In this array the correct answer is 1, as the sums of left and right side are equal only with \[1,2\] and \[-1,4,0\]. Now the sum of both sides is 3.
 
-* Create a class *Split* with the following method:
+* Create a class **Split** with the following method:
 
 * * **int Calculate(int[] t)**, which returns the amount of possible ways.
 
