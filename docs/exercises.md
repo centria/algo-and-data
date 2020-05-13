@@ -258,7 +258,7 @@ Console.WriteLine(m.Calculate(new int[] {1,2,3,4,5})); // 1
 Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
 ```
 
-* You should be able to do this in *O(n)* to get all the points.
+* You should be able to do this in *O(n^2)* to get all the points.
 
 ### Exercise 5
 
