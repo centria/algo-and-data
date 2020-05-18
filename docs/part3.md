@@ -1,5 +1,5 @@
 ---
-title: "Part 3 - Recursion"
+title: "Part 3 - Recursion and Sorting"
 permalink: /part3/
 nav_order: 4
 published: true
