@@ -1,7 +1,7 @@
 ---
 title: "Part 5 - Graphs"
 permalink: /part5/
-nav_order: 6
+nav_order: 7
 published: true
 ---
 

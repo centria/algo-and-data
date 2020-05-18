@@ -1,7 +1,7 @@
 ---
 title: "Part 6 - Implementing data structures"
 permalink: /part6/
-nav_order: 7
+nav_order: 8
 published: true
 ---
 
