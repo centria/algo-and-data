@@ -219,3 +219,59 @@ This solution takes up much less space (and is faster), since we do not need a r
 Recursion is usually easier to understand and to create, and the code is shorter. It is, how ever, usually also slower, and takes up more memory space.
 
 # Sorting algorithms
+
+Sorting is an essential problem in algorithmics, where the problem is to sort *n* elements into order of magnitude. For example, we could have an array \[5, 2, 4, 2, 6, 1\] and we could sort the elements from smallest to largest, resulting in \[1, 2, 2, 4, 5, 6\].
+
+Our goal is to do this *efficiently*. It is easy to sort an algorithm in *O(n^2)*, but this is too slow on a large array. We will look into some efficient sorting algorithms, which only take *O(n log n)* time.
+
+We can use sorting in many ways in algorithm design, because we can often make the problem solving easier by first orderding the data.
+
+## Sorting in O(n^2)
+
+Let's first see a simple sorting algorithm, which sorts an array with *n* elements in *O(n^2)* with two loops. Even though the algorithm is not fast, it is worth knowing and gives a base for designing more efficient algorithms.
+
+### Insertion sort
+
+*Insertion sort* goes through the array from left to right. When the algorithm comes into a certain point in array, it will move the element in that position to the correct position in the beginning of the array, so that the beginning of the array is in order. So, when the algorithm reaches the end, the whole array is sorted.
+
+```console
+5 *2* | 4 2 6 1 --> *2* 5 | 4 2 6 1
+
+2 5 *4* | 2 6 1 --> 2 *4* 5 | 2 6 1
+
+2 4 5 *2* | 6 1 --> 2 *2* 4 5 | 6 1
+
+2 2 4 5 *6* | 1 --> 2 2 4 5 *6* | 1
+
+2 2 4 5 6 *1* | --> *1* 2 2 4 5 6 |
+```
+
+Here we see the insertation sort in action. In each row, the element marked with stars is moved into its correct position. The line marks the location of where the array is sorted upto. The following code will implement this sorting:
+
+```console
+for i = 1 to n-1
+  j = i-1
+  while j >= 0 and array[j] > array[j+1]
+    swap(array[j], array[j+1])
+    j -= 1
+```
+
+The code goes through all the positions *1...n-1* and transfers the element in position *i* to the correct position. This is done with the inner while-loop, where each step swaps the element and the one left of it. Here the command *swap* is a notation for switching the two elements together.
+
+The efficiency of insertion sort is dependant on the content of the array we are sorting. The algorithm is faster, the more the array is already in order. If the array is already in order, it spends *O(n)*, since no element needs to be moved. The worst case for the algorithm is an array in *inverted order*, where each element has to be moved to the beginning of the array, and time spent is *O(n^2)*.
+
+### Inversions
+
+A useful term in analysation of sorting algorithms is *inversion*: two elements in an array, which are in wrong order. For example in array \[3, 1, 4, 2\] is three inversions: (3,1), (3,2) and (4,2). The amount of inversions tells about the order of the array: The less there are inversions, the closer the array is to being in correct order. Most notably, *an array is in order when it has no inversions*.
+
+When a sorting algorithm sorts an array, it *removes* inversions. For example, each time the insertion sort swaps the two elements with each other, it is removing one insertion from the array. Thus the work load for insertion sort is equal to the amount of inversions in the array.
+
+We have already established, that the worst input for insertion sort is a reverse ordered array. In an array like this each pair of elements create an inversion, so the amount of inversions is
+
+n(n-1) / 2 = O(n^2)  
+
+How well does the insertion sort work *on average*? If we assume that an array has *n* elements in random order, each pair of elements forms an inversion with the probability of 1/2. Thus the *expected value* for inversions is
+
+n(n-1) / 4 = O(n^2)  
+
+Which means we are still spending quadratic time. The reason why insertation sort is so *inefficient* is that it does not remove the inversions efficiently enough. If we want to create a better sorting algorithm, we have to design it in such a way, that it can remove multiple inversions *at the same time*. In practice, the algorithm should be able to move the element from the wrong position to the other side of the array *efficiently*.
