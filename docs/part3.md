@@ -320,3 +320,6 @@ The picture above shows how the algorithm works with an array **\[5, 1, 2, 9, 7,
 How efficient is merge sort? Since all the calls in the method *sort* half the size of the array, the recursion will form *O(log n)* layers (see the picture above). On the topmost layer we have an array with *n* elements, next level we have two arrays with *n/2* elements, next we have four arrays with *n/4* elements, and so on. The method *merge* functions in linear time, So on each level the merges take up *O(n)*. Thus the total time complexity of the algorithm is *O(n)* * *O(log n)*, which is of course *O(n log n)*.
 
 ## Quick sort
+
+![Merge sort](../assets/images/quicksort.png)
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
