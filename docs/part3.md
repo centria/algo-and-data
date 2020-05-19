@@ -230,7 +230,7 @@ We can use sorting in many ways in algorithm design, because we can often make t
 
 Let's first see a simple sorting algorithm, which sorts an array with *n* elements in *O(n^2)* with two loops. Even though the algorithm is not fast, it is worth knowing and gives a base for designing more efficient algorithms.
 
-### Insertion sort
+## Insertion sort
 
 *Insertion sort* goes through the array from left to right. When the algorithm comes into a certain point in array, it will move the element in that position to the correct position in the beginning of the array, so that the beginning of the array is in order. So, when the algorithm reaches the end, the whole array is sorted.
 
@@ -260,7 +260,7 @@ The code goes through all the positions *1...n-1* and transfers the element in p
 
 The efficiency of insertion sort is dependant on the content of the array we are sorting. The algorithm is faster, the more the array is already in order. If the array is already in order, it spends *O(n)*, since no element needs to be moved. The worst case for the algorithm is an array in *inverted order*, where each element has to be moved to the beginning of the array, and time spent is *O(n^2)*.
 
-### Inversions
+## Inversions
 
 A useful term in analysation of sorting algorithms is *inversion*: two elements in an array, which are in wrong order. For example in array **\[3, 1, 4, 2\]** is three inversions: **(3,1)**, **(3,2)** and **(4,2)**. The amount of inversions tells about the order of the array: The less there are inversions, the closer the array is to being in correct order. Most notably, *an array is in order when it has no inversions*.
 
@@ -277,3 +277,46 @@ n(n-1) / 4 = O(n^2)
 Which means we are still spending quadratic time. The reason why insertation sort is so *inefficient* is that it does not remove the inversions efficiently enough. If we want to create a better sorting algorithm, we have to design it in such a way, that it can remove multiple inversions *at the same time*. In practice, the algorithm should be able to move the element from the wrong position to the other side of the array *efficiently*.
 
 ## Sorting in O(n log n)
+
+Next we will look into two efficient sorting algorithms, which are based on recursion. In both algorithms the idea is, that when we want to sort an array, we split it into two smaller parts and sort them recursively. After this we merge the sorted subarrays into a complete sorted array.
+
+## Merge sort
+
+![Merge sort](../assets/images/mergesort.png)
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
+
+*Merge sort* is a recursive sorting algorith,. which is based on halving the array. When we get an array of size *n* to be sorted, we split it from the middle into two subarray, which both have aproximately *n/2* elements. After this we sort the subarrays and *merge* the sorted subarrays, so that they form a complete ordered array. Recursion ends at *n = 1*, when array is already in order and nothing more needs to be done. The following code shows the functionality of merge sort:
+
+```console
+sort(a,b)
+  if a == b
+    return
+  k = (a+b)/2
+  sort(a,k)
+  sort(k+1,b)
+  merge(a,k,k+1,b)
+```
+
+The method sorts the array *a...b* (a subarray from point *a* to point *b*), so if we want to order the whole array, we call the method with parameters *a = 0* and *b = n-1*, i.e. the first and the last index. First the method checks if the array only has one element, and if so, the method ends. Otherwise it will save the middle value into the variable *k* and sorts the left and right parts recursively. In the end, it will call the method *merge*, which combines the ordered halves. The next code shows the functionality of this method:
+
+```console
+merge(a1, b1, a2, b2)
+  a = a1, b = b2
+  for i = a to b
+    if a2 > b2 or (a1 <= b1 and array[a1] <= array[a2])
+      help[i] = array[a1]
+      a1 += 1
+    else
+      help[i] = array[a2]
+      a2 += 1
+  for i = a to b
+    array[i] = help[i]
+```
+
+As parameters are given values *a1...b1* and *a2...b2*, where *b1 + 1 = a2*. The method assumes, that the values between these have been ordered, and it will merge the elements in a way that the whole area *a1...b2* is ordered. The method is based on a loop, which goes through the *a1...b1* and *a2...b2* side by side, and chooses the always the next smallest element to the final order. For the merge not to mix the array, the method uses a global help array, where it first forms the sorted subarray, and then copies the elements from said array to the actual array.
+
+The picture above shows how the algorithm works with an array **\[5, 1, 2, 9, 7, 5, 4, 2\]**. First the array is halved into **\[5, 1, 2, 9\]** and **\[7, 5, 4, 2\]** and it sorts both of these subarrays by calling itself. When the algorithm gets the array **\[5, 1, 2, 9\]** as a parameter, it will divide it into subarrays **\[5, 1\]** and **\[2, 9\]**, and so on. Eventually we will have subarrays of Length one left, which are in order. Then the rekursive division ends and the algorithm starts to reassemble the sorted subarrays from smallest to largest.
+
+How efficient is merge sort? Since all the calls in the method *sort* half the size of the array, the recursion will form *O(log n)* layers (see the picture above). On the topmost layer we have an array with *n* elements, next level we have two arrays with *n/2* elements, next we have four arrays with *n/4* elements, and so on. The method *merge* functions in linear time, So on each level the merges take up *O(n)*. Thus the total time complexity of the algorithm is *O(n)* * *O(log n)*, which is of course *O(n log n)*.
+
+## Quick sort
