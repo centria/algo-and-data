@@ -432,6 +432,8 @@ Console.WriteLine(b.Find((new int[] {0}, 0)); // true
 onsole.WriteLine(s.Calculate(Randomizer(100000), 3)); // ?
 ```
 
+### Exercise 5
+
 * Your task is to *create* an array with *n integers, which contains the numbers *1...n* and it has **exactly** *k* inversions. You can create any array, which fulfills these criteria.
 
 * Create a class **Inversions**, with the following method:
@@ -452,7 +454,7 @@ foreach (int i in t)
 
 NOTICE! You can decide the locations of the inversions, just make sure the conditions apply!
 
-### Exercise 5
+
 
 ## Part 4 - List and Trees
 
