@@ -363,4 +363,72 @@ How could we improve quick sort? There have been multiple variations over the ye
 
 These were just two common ways of sorting an array, but there are many, many more. You can find more about other sorting algorithms from here [**https://en.wikipedia.org/wiki/Sorting_algorithm**](https://en.wikipedia.org/wiki/Sorting_algorithm).
 
+## Using sorting
+
+The meaning of sorting for algorithmics is that we can solve problems efficienty, as long as the data is in order. Thus a common way to create an efficient algorithm is first to sort the input in *O(n log n)* and then use the sorting to our advantage later in the algorithm.
+
+## Array algorithms
+
+With sorting we can solve in *O(n log n)* time many tasks for arras. We will now go throught two of such tasks.
+
+First task is to calculate, how many *different* elements a given array has. For example, an array **\[2, 1, 4, 2, 4, 2\]** includes three different elements: 1, 2 and 4. We can solve this by first sorting the array, after which the equal numbers are next to each other. After this we can calculate the output easily, as we only need to check at how many position there are different elements *next to each other*. We can do it like this:
+
+
+```console
+sort(array)
+counter = 1
+for i = 1 to n-1
+  if array[i-1] != array[i]
+    counter += 1
+print(counter)
+```
+
+The algorithm first sorts the array in time *O(n log n)*, after which it goes through the array with a for-loop in *O(n)*. The total time complexity is *O(n log n)*.
+
+But what if we want to know, what is the *most common* value in the array? With the same example array, the most common element is 2, as it is three times in the array. This can also be done with sorting, since after it the same elements are next to eachh other, and all we have to do is find the longest repetition. We can do it as follows:
+
+```console
+sort(array)
+amount = 1
+largest = 1
+common = array[0]
+for i = 1 to n-1
+  if array[i-1] != array[i]
+    amount = 0
+  amount += 1
+  if amount > largest
+    largest = amount
+    common = array[i]
+print(common)
+```
+
+Also here the sorting algorithm takes *O(n log n)*, and for-loop takes *O(n)*, so the total time complexity is again *O(n log n)*.
+
+## Binary search
+
+*Binary search* is a method for finding an element from a sorted array in time *O(log n)*. The idea is to keep in mind the search range where the value can be, and half the range with each step by looking at the element in the middle of the range. As the array is in order, we can always deduct, which way we should keep going with our search. The following code searches an element *x* from an array with binary search:
+
+```console
+a = 0
+b = n-1
+while a <= b
+  k = (a+b)/2
+  if array[k] == x
+    // we found the x
+    break
+  if array[k] < x
+    a = k+1
+  if array[k] > x
+    b = k-1
+```
+
+The algorithm keeps track of the search range **\[a,b\]**, which at the beginning is **\[0, n-1\]**, since the element might be anywhere in the array. With each step the algorithm checks the element in the middle *k = (a+b)/2*. If it is *x*, the search ends. If the element is less than *x*, the search continues on the right side, and if it is more than *x*, the search continues on the left side. As the range is halved on each step, the time complexity is *O(log n)*.
+
+![Binary search](https://github.com/centria/algo-and-data/raw/master/assets/images/binarysearch.png)  
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
+
+The picture above shows the functionality, when we are looking for the value of *6* from an ordered array. At first, the range is the whole array, and the middle element is 4. Thuse we know, that if the array contains a 6, it has to be at the right half of the array. Next the range is the top half of the array, and the middle is at 7. Now we can deduct, that 6 has to be on the left side of this. The range is halved on each step, and as we continue, after two more steps there is only one element in the range, and it is 6, which we were looking for.
+
+With binary search we could find out for example, if the array has two elements *a* and *b* so, that *a + b = x*, where x is the given input. The idea is to sort the array first and then go through all the elements of the array. With each element we examine, could it be *a*. In this case, there would have to be another element *b* in such a way, that *a + b = x*, or the array should contain an element *x - a*. We can find this with binary search in *O(log n)*. As a result, we have an algorithm, which takes up time *O(n log n)*, because both sorting and going through the array with binary search take up *O(n log n)*.
+
 [**Exercises here**](https://centria.github.io/algo-and-data/exercises/#part-3---recursion)

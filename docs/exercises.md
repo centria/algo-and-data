@@ -300,6 +300,38 @@ Console.WriteLine(s.Calculate(new int[] {0,0,0,0,0})); // 4
 
 * Deadline 26.5. at 23:59
 
+* Not all of the exercises require recursion. 
+* You can use the built-in sort of C#, unless stated otherwise.
+
+
+
+### Exercise 1
+
+### Exercise 2
+
+
+### Exercise 3
+
+* You are given an array with *n* integers. Your task is to solve, what is the smallest difference between two elements in the array.
+
+* Create a class **SmallestDifference** with the following method:
+
+* **int Calculate(int[] t)**, which returns the smallest difference between two elements.
+
+
+The following code represents the behavior:
+
+```cs
+SmallestDifference s = new SmallestDifference();
+Console.WriteLine(s.Calculate(new int[] {4,1,8,5})); // 1
+Console.WriteLine(s.Calculate(new int[] {1,10,100})); // 9
+Console.WriteLine(s.Calculate(new int[] {1,1,1,1,1})); // 0
+```
+
+### Exercise 4
+
+### Exercise 5
+
 ## Part 4 - Data structures
 
 * Deadline 2.6. at 23:59
