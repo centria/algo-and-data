@@ -347,4 +347,11 @@ pivot(a,b)
 
 In this example, the pivot is always the first element. The method goes through each element in the range, and moves the elements smaller than the pivot to the beginning. The variable *k* determines the position, where the next smaller element will be moved. In the end, the pivot itself will be moved to the middle to position *k*, which the method returns.
 
-The picture above shows how the algorithm works with an array **\[5, 1, 2, 9, 7, 5, 4, 2\]**. Each grey 
+The picture above shows how the algorithm works with an array **\[5, 1, 2, 9, 7, 5, 4, 2\]**. Each grey element shows the location of the pivot. First the pivot for the whole array is 5, and the algorithm moves the elements so that on the left side there are elements **\[2, 1, 2, 4\]** and on the right **\[5, 9, 7\]**. After this the left and right subarrays are sorted similarly recursively.
+
+The efficiency of quick sort is dependant on how the elements are divided around the pivot. If we are lucky, there are approximately the same amount of elements on both sides of the pivot. This way the array is halved after every pivot, and quick sort is efficient. As the method **pivot** works in linear time, quick sort takes in this situation *O(n log n)*, just like merge sort.
+
+There is a possibility, that the pivot point divides the array unevenly. 
+
+![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/badsplit.png)  
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
