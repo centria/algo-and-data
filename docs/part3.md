@@ -235,18 +235,11 @@ Let's first see a simple sorting algorithm, which sorts an array with *n* elemen
 *Insertion sort* goes through the array from left to right. When the algorithm comes into a certain point in array, it will move the element in that position to the correct position in the beginning of the array, so that the beginning of the array is in order. So, when the algorithm reaches the end, the whole array is sorted.
 
 
-5 *2* | 4 2 6 1 --> *2* 5 | 4 2 6 1
-
-2 5 *4* | 2 6 1 --> 2 *4* 5 | 2 6 1
-
-2 4 5 *2* | 6 1 --> 2 *2* 4 5 | 6 1
-
-2 2 4 5 *6* | 1 --> 2 2 4 5 *6* | 1
-
-2 2 4 5 6 *1* | --> *1* 2 2 4 5 6 |
+![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/insertionsort.png)  
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
 
-Here we see the insertation sort in action. In each row, the element marked with stars is moved into its correct position. The line marks the location of where the array is sorted upto. The following code will implement this sorting:
+Here we see the insertation sort in action. In each row, the element highlighted in gray is moved into its correct position in the beginning of the array. The line marks the location of where the array is sorted upto. The following code will implement this sorting:
 
 ```console
 for i = 1 to n-1
@@ -282,7 +275,7 @@ Next we will look into two efficient sorting algorithms, which are based on recu
 
 ## Merge sort
 
-![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/mergesort.png)
+![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/mergesort.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
 *Merge sort* is a recursive sorting algorith,. which is based on halving the array. When we get an array of size *n* to be sorted, we split it from the middle into two subarray, which both have aproximately *n/2* elements. After this we sort the subarrays and *merge* the sorted subarrays, so that they form a complete ordered array. Recursion ends at *n = 1*, when array is already in order and nothing more needs to be done. The following code shows the functionality of merge sort:
@@ -321,5 +314,37 @@ How efficient is merge sort? Since all the calls in the method *sort* half the s
 
 ## Quick sort
 
-![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/quicksort.png)
+![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/quicksort.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
+
+*Quick sort* gives another type of recursive approach to sorting an array. When we receive an array to be sorted, we first choose one of its elements as the *pivot*. After this we shift the elements so, that the elements *smaller than the pivot* are on the left side of the pivot, and the elements *larger than the pivot* are on the right side, and equal elements can be *on either side*. Finally, we recursively sort the subarrays, which are formed on the left side and the right side of the pivot. The following code shows us this functionality:
+
+```console
+sort(a, b)
+  if a >= b
+    return
+  k = pivot(a,b)
+  sort(a, k-1)
+  sort(k+1, b)
+```
+
+The method sorts the array with range *a...b*. If the range is empty or if it has only one element, the method does nothing. Otherwise it will call the method **pivot**, which chooses the *pivot*, shifts the elements accordingly and returns the position *k*, where the pivot will be after the shifts.
+
+After this, the the left part of the array (a...k-1) and right part (k+1...b) are sorted recursively.
+
+The function **pivot** can be done in many ways, because we can choose any element as the pivot point, and there are many ways with which to move the elements. In our example, we are using the follwing code:
+
+```console
+pivot(a,b)
+  k = a
+  for i = a+1 to b
+    if array[i] < array[a]
+      k += 1
+      swap(array[i], array[k])
+  swap(array[a], array[k])
+  return k
+```
+
+In this example, the pivot is always the first element. The method goes through each element in the range, and moves the elements smaller than the pivot to the beginning. The variable *k* determines the position, where the next smaller element will be moved. In the end, the pivot itself will be moved to the middle to position *k*, which the method returns.
+
+The picture above shows how the algorithm works with an array **\[5, 1, 2, 9, 7, 5, 4, 2\]**. Each grey 
