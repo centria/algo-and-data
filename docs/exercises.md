@@ -182,8 +182,8 @@ public string CreateInput(int n)
   for (int i = 0; i < n; i++)
   {
     sb.Append(random.Next(0, 2).ToString());
-  } 
-  return input;
+  }
+  return sb.ToString();
 }
 ```
 
@@ -301,16 +301,47 @@ Console.WriteLine(s.Calculate(new int[] {0,0,0,0,0})); // 4
 * Deadline 26.5. at 23:59
 
 * Not all of the exercises require recursion. 
+
 * You can use the built-in sort of C#, unless stated otherwise.
 
+* You can create random content int arrays with length *n* with the following code:
+
+```cs
+public static int[] Randomizer(int n)
+{
+  Random random = new Random();
+  int[] arr = new int[n];
+  for (int i = 0; i < arr.Length; i++)
+  {
+    // integers between 1 and 1000 are enough for us
+    arr[i] = random.Next(1, 1001);
+  }
+  return arr;
+}
+```
 
 
 ### Exercise 1
 
+* Create a method **void Hello(int n)** which prints the string *"Hello!"* **recursively**, *n* amount of times.
+
+* You can find the example from part 1.
+
+The following code represents the behavior:
+
+```cs
+Hello(5);
+```
+
+```console
+Hello!
+Hello!
+Hello!
+Hello!
+Hello!
+```
+
 ### Exercise 2
-
-
-### Exercise 3
 
 * You are given an array with *n* integers. Your task is to solve, what is the smallest difference between two elements in the array.
 
@@ -326,17 +357,108 @@ SmallestDifference s = new SmallestDifference();
 Console.WriteLine(s.Calculate(new int[] {4,1,8,5})); // 1
 Console.WriteLine(s.Calculate(new int[] {1,10,100})); // 9
 Console.WriteLine(s.Calculate(new int[] {1,1,1,1,1})); // 0
+Console.WriteLine(s.Calculate(Randomizer(100))); // depends on random
+```
+
+### Exercise 3
+
+* You are given an array with *n* integers. Your task is to create a [**merge sort**](https://centria.github.io/algo-and-data/part3/#merge-sort) and [**quick sort**](https://centria.github.io/algo-and-data/part3/#quick-sort) for sorting the array.
+
+* I suggest you use the base from the material, linked in the bullet point above. **DO NOT USE built-in sorts!**
+
+* Create a class **Sorting** with the following methods:
+* **void MergeSort(int[] t)**, which sorts the list and prints how long it took.
+* **void QuickSort(int[] t)**, which sorts the list and prints how long it took.
+
+* Measure the time taken for both algorithms. 
+
+You can do it by adding 
+
+```cs
+DateTime start = DateTime.Now;
+```
+
+In the beginning of the algorithm and
+
+```cs
+DateTime end = DateTime.Now;
+Console.WriteLine("Time this took: " + end.Subtract(start));
+```
+
+* DO NOT include the input creation time in the efficiency calculation!
+
+* Save the results of your outputs to a file, clearly marking the size of the input, which algorithm you used, and how long it took. You can use this kind of a table, for example, in an MD file:
+
+```md
+| Input size | Quick   | Merge   |
+|:----------:|:-------:|:-------:|
+| 10         | 0.000 s | 0.000 s |
+| 100        | 0.000 s | 0.000 s |
+| 1000       | 0.000 s | 0.000 s |
+| 10000      | 0.000 s | 0.000 s |
+```
+
+The following code represents the behavior:
+
+```cs
+Sorting s = new Sorting();
+int[] sortMe = Randomizer(100);
+int[] sortMeLarge = Randomizer(1000000);
+s.QuickSort(sortMe);
+s.MergeSort(sortMe);
+s.QuickSort(sortMeLarge);
+s.MergeSort(sortMeLarge);
 ```
 
 ### Exercise 4
 
+* You are given an array with *n* integers. Your task is to create a *binary search*, which finds if the array contains an integer *x*.
+
+* You can review the algorithm structure [**from here**](https://centria.github.io/algo-and-data/part3/#binary-search).
+
+* Create a class **BinarySearch** with the following method:
+
+* **bool Find(int[] t, int x)**, which returns if the array contains x or not.
+
+
+The following code represents the behavior:
+
+```cs
+BinarySearch b = new BinarySearch();
+Console.WriteLine(b.Find((new int[] {4,1,8,5}, 2)); // false
+Console.WriteLine(b.Find((new int[] {0,0}, 0)); // true
+Console.WriteLine(b.Find((new int[] {4,1,8,5,8,7,4,,2,3}, 2)); // true
+Console.WriteLine(b.Find((new int[] {0}, 0)); // true
+onsole.WriteLine(s.Calculate(Randomizer(100000), 3)); // ?
+```
+
+* Your task is to *create* an array with *n integers, which contains the numbers *1...n* and it has **exactly** *k* inversions. You can create any array, which fulfills these criteria.
+
+* Create a class **Inversions**, with the following method:
+
+* **int[] Create(int n, int k)**, which returns the array.
+
+
+The following code represents the behavior:
+
+```cs
+Inversions inv = new Inversions();
+int[] t = inv.Create(5, 2);
+foreach (int i in t)
+{
+  Console.Write(i + " ");  // 2 1 3 5 4
+}
+```
+
+NOTICE! You can decide the locations of the inversions, just make sure the conditions apply!
+
 ### Exercise 5
 
-## Part 4 - Data structures
+## Part 4 - List and Trees
 
 * Deadline 2.6. at 23:59
 
-## Part 5 - Algorithms
+## Part 5 - Graphs
 
 * Deadline 9.6. at 23:59
 
