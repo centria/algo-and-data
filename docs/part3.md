@@ -351,7 +351,16 @@ The picture above shows how the algorithm works with an array **\[5, 1, 2, 9, 7,
 
 The efficiency of quick sort is dependant on how the elements are divided around the pivot. If we are lucky, there are approximately the same amount of elements on both sides of the pivot. This way the array is halved after every pivot, and quick sort is efficient. As the method **pivot** works in linear time, quick sort takes in this situation *O(n log n)*, just like merge sort.
 
-There is a possibility, that the pivot point divides the array unevenly. 
+There is a possibility, that the pivot point divides the array unevenly. The image below illustrates a situation, where all the elements are on the right side of the pivot. This time quick sort takes up *O(n^2*), since there are *O(n)* recursive levels. It clearly is *not* a good idea to choose the first element of an array as the pivot in all cases. For example, an array that is already in order, takes up *O(n^2)* time.
 
 ![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/badsplit.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
+
+
+Another situation is where an array has multiples of the same value. In extreme situation, *all the elements* are the same, which is a very possible input. This time the method **pivot** in our soilution will always create a bad result, where all the elements are on the right side of the pivot. It is not enough to choose a good pivot, but also the way of moving elements affects the efficiency of quick sort.
+
+How could we improve quick sort? There have been multiple variations over the years, which aim to improve it. On more advanced way of choosing a pivot is to take the first, middle and last elements, and choose the one which is in the middle of these three in order. This works quite well in most cases. A better way of moving elements for example is to go through side by side elements from the beginning and the end, and to make sure the pivot stays in the middle, if all the elements are equal.
+
+These were just two common ways of sorting an array, but there are many, many more. You can find more about other sorting algorithms from here [**https://en.wikipedia.org/wiki/Sorting_algorithm**](https://en.wikipedia.org/wiki/Sorting_algorithm).
+
+[**Exercises here**](https://centria.github.io/algo-and-data/exercises/#part-3---recursion)
