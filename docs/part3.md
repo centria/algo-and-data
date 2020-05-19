@@ -282,7 +282,7 @@ Next we will look into two efficient sorting algorithms, which are based on recu
 
 ## Merge sort
 
-![Merge sort](../assets/images/mergesort.png)
+![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/mergesort.png)
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
 *Merge sort* is a recursive sorting algorith,. which is based on halving the array. When we get an array of size *n* to be sorted, we split it from the middle into two subarray, which both have aproximately *n/2* elements. After this we sort the subarrays and *merge* the sorted subarrays, so that they form a complete ordered array. Recursion ends at *n = 1*, when array is already in order and nothing more needs to be done. The following code shows the functionality of merge sort:
@@ -321,5 +321,5 @@ How efficient is merge sort? Since all the calls in the method *sort* half the s
 
 ## Quick sort
 
-![Merge sort](../assets/images/quicksort.png)
+![Merge sort](https://github.com/centria/algo-and-data/raw/master/assets/images/quicksort.png)
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
