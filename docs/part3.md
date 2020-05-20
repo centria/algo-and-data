@@ -76,7 +76,7 @@ Here the method **Test** first prints the value for parameter *n*. If n is 1, th
 
 ## Multiple calls
 
-The situation becomes more interesting, when a mehtod calls itself multiple times. The following code is otherwise equal to the previous one, but the now at the end we have *two* recursive calls:
+The situation becomes more interesting, when a method calls itself multiple times. The following code is otherwise equal to the previous one, but the now at the end we have *two* recursive calls:
 
 ```cs
 static void Main(string[] args)
