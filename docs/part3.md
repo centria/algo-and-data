@@ -385,7 +385,7 @@ print(counter)
 
 The algorithm first sorts the array in time *O(n log n)*, after which it goes through the array with a for-loop in *O(n)*. The total time complexity is *O(n log n)*.
 
-But what if we want to know, what is the *most common* value in the array? With the same example array, the most common element is 2, as it is three times in the array. This can also be done with sorting, since after it the same elements are next to eachh other, and all we have to do is find the longest repetition. We can do it as follows:
+But what if we want to know, what is the *most common* value in the array? With the same example array, the most common element is 2, as it is three times in the array. This can also be done with sorting, since after it the same elements are next to each other, and all we have to do is find the longest repetition. We can do it as follows:
 
 ```console
 sort(array)
