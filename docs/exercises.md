@@ -434,7 +434,7 @@ onsole.WriteLine(s.Calculate(Randomizer(100000), 3)); // ?
 
 ### Exercise 5
 
-* Your task is to *create* an array with *n integers, which contains the numbers *1...n* and it has **exactly** *k* inversions. You can create any array, which fulfills these criteria.
+* Your task is to *create* an array with *n* integers, which contains the numbers *1...n* and it has **exactly** *k* inversions. You can create any array, which fulfills these criteria.
 
 * Create a class **Inversions**, with the following method:
 
