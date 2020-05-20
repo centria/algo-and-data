@@ -369,7 +369,7 @@ The meaning of sorting for algorithmics is that we can solve problems efficienty
 
 ## Array algorithms
 
-With sorting we can solve in *O(n log n)* time many tasks for arras. We will now go throught two of such tasks.
+With sorting we can solve in *O(n log n)* time many tasks for array. We will now go throught two of such tasks.
 
 First task is to calculate, how many *different* elements a given array has. For example, an array **\[2, 1, 4, 2, 4, 2\]** includes three different elements: 1, 2 and 4. We can solve this by first sorting the array, after which the equal numbers are next to each other. After this we can calculate the output easily, as we only need to check at how many position there are different elements *next to each other*. We can do it like this:
 
