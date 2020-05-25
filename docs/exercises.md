@@ -425,11 +425,11 @@ The following code represents the behavior:
 
 ```cs
 BinarySearch b = new BinarySearch();
-Console.WriteLine(b.Find((new int[] {4,1,8,5}, 2)); // false
-Console.WriteLine(b.Find((new int[] {0,0}, 0)); // true
-Console.WriteLine(b.Find((new int[] {4,1,8,5,8,7,4,,2,3}, 2)); // true
-Console.WriteLine(b.Find((new int[] {0}, 0)); // true
-onsole.WriteLine(s.Calculate(Randomizer(100000), 3)); // ?
+Console.WriteLine(b.Find(new int[] {4,1,8,5}, 2)); // false
+Console.WriteLine(b.Find(new int[] {0,0}, 0)); // true
+Console.WriteLine(b.Find(new int[] {4,1,8,5,8,7,4,2,3}, 2)); // true
+Console.WriteLine(b.Find(new int[] {0}, 0)); // true
+Console.WriteLine(b.Find(Randomizer(100000), 3)); // depends on Random
 ```
 
 ### Exercise 5
