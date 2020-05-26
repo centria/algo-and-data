@@ -470,6 +470,7 @@ DO NOT DO THESE YET, THE ORDER MIGHT STILL CHANGE!
 * **AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
 * **RemoveFirst()** Removes the first node from the linked list.
 * **RemoveLast()** Removes the last node from the linked list.
+* **GetNode(int x)** Get the value of the node in position *x*.
 * **ToString()** returns the all the values of the list, from the beginning to the end.
 
 ```cs
@@ -480,6 +481,8 @@ myLinks.AddLast(3);
 Console.WriteLine(myLinks); // for example: 2, 1, 3
 myLinks.RemoveFirst();
 Console.WriteLine(myLinks); // for example: 1, 3
+Console.WriteLine(myLinks.GetNode(0)); // 1
+Console.WriteLine(myLinks.GetNode(1)); // 3
 ```
 
 ## Part 5 - Graphs
