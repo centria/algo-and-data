@@ -458,7 +458,6 @@ NOTICE! You can decide the locations of the inversions, just make sure the condi
 
 ## Part 4 - List and Trees
 
-DO NOT DO THESE YET, THE ORDER MIGHT STILL CHANGE!
 
 * Deadline 2.6. at 23:59
 
