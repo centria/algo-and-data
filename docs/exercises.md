@@ -560,7 +560,7 @@ If the numbers would be added in order, they would all go into a single line, an
 * **void Add(int x)**, adds the integer *x* to your tree.
 * **int Height()**, which returns the height of the tree.
 
-* Add some numbers (1 to 100 or similar) to your tree in random order, and print the result. Do this at least three times and save the results.
+* Add some numbers (1 to 50 or similar) to your tree in random order, and print the result of **Height**. Do this at least three times and save the results.
 
 For example:
 
