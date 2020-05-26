@@ -464,6 +464,8 @@ DO NOT DO THESE YET, THE ORDER MIGHT STILL CHANGE!
 
 ### Exercise 1
 
+Your task is to create a *doubly linked list* with its most common functions.
+
 * Implement class **Node** from the material.
 * Implement class **LinkedList**, with the following methods:
 * **AddFirst(int n)** Adds a **Node** to the beginning of the linked list, with **value** *n*.
@@ -487,7 +489,7 @@ Console.WriteLine(myLinks.GetNode(1)); // 3
 
 * Your code should be efficient, i.e. all the methods should be at maximum of *O(n)* time comlexity.
 
-### Exercise 1
+### Exercise 2
 
 * In a circle there are *n* children, all numbered *1, 2, 3,...,n*. Every turn every other child leaves the circle, until there is only one child left. What is the number of this child?
 
@@ -506,6 +508,76 @@ Console.WriteLine(g.Last(123)); // 119
 ```
 
 * This should work with circles up to a million children (I know, that's a lot of people), so be efficient.
+
+
+### Exercise 3
+
+Your task is to create a class, which keeps a collection of numbers. The collection can be added numbers into and it can be asked, what is the smallest distance between two numbers.
+
+* Create a class **SmallestDistance** with the following methods:
+* **void Add(int x)**
+* **int Calculate()**: returns the smallest distance between two integers.
+
+The following represents the functionality:
+
+```cs
+SmallestDistance s = new SmallestDistance();
+s.Add(3);
+s.Add(8);
+Console.WriteLine(s.Calculate()); // 5
+s.Add(20);
+Console.WriteLine(s.Calculate()); // 5
+s.Add(9);
+Console.WriteLine(s.Calculate()); // 1
+```
+
+
+### Exercise 4
+
+A binary tree has *n* nodes, numbered *1...n*. You are given the *preorder a* and *in-order b*, and your task is to produce the *post-order* of said tree.
+
+NOTICE! It is not necessarily a binary search tree, so the nodes can be in any order in the tree.
+
+* Create the class **Order** with the following method:
+* **int[] Create(int[] a, int[] b)**, which returns the post-order of the nodes.
+
+An example:
+
+```cs
+Order o = new Order();
+int[] a = {4,2,1,3,5};
+int[] b = {2,4,3,1,5};
+int[] c = o.Create(a,b);
+Console.WriteLine(String.Join(" ", c)); // 2 3 5 1 4
+```
+
+### Exercise 5
+
+You task is to implement a *binary search tree*, where you can add new nodes and calculate the height of the tree.
+
+If the numbers would be added in order, they would all go into a single line, and the tree would have a very large height. What happens, if you add them in *random* order?
+
+* Create a class **BinarySearchTree** and in it the methods:
+* **void Add(int x)**, adds the integer *x* to your tree.
+* **int Height()**, which returns the height of the tree.
+
+* Add some numbers (1 to 100 or similar) to your tree in random order, and print the result. Do this at least three times and save the results.
+
+For example:
+
+```cs
+BinarySearchTree bs = new BinarySearchTree();
+bs.Add(5); // Becomes your root
+bs.Add(4); // Goes to the left
+bs.Add(6); // Goes to the right
+Console.WriteLine(bs.Height()); // 1
+bs.Add(3);
+bs.Add(1);
+bs.Add(7);
+Console.WriteLine(bs.Height()); // 3
+```
+
+
 
 
 ## Part 5 - Graphs
