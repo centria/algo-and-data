@@ -460,6 +460,26 @@ NOTICE! You can decide the locations of the inversions, just make sure the condi
 
 * Deadline 2.6. at 23:59
 
+### Exercise 1
+
+* Implement class **Node** from the material.
+* Implement class **LinkedList**, with the following methods:
+* **AddFirst(int n)** Adds a **Node** to the beginning of the linked list, with **value** *n*.
+* **AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
+* **RemoveFirst()** Removes the first node from the linked list.
+* **RemoveLast()** Removes the last node from the linked list.
+* **ToString()** returns the all the values of the list, from the beginning to the end.
+
+```cs
+LinkedList myLinks = new LinkedList();
+myLinks.AddLast(1);
+myLinks.AddFirst(2);
+myLinks.AddLast(3);
+Console.WriteLine(myLinks); // for example: 2, 1, 3
+myLinks.RemoveFirst();
+Console.WriteLine(myLinks); // for example: 1, 3
+```
+
 ## Part 5 - Graphs
 
 * Deadline 9.6. at 23:59
