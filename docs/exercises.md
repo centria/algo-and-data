@@ -485,6 +485,29 @@ Console.WriteLine(myLinks.GetNode(0)); // 1
 Console.WriteLine(myLinks.GetNode(1)); // 3
 ```
 
+* Your code should be efficient, i.e. all the methods should be at maximum of *O(n)* time comlexity.
+
+### Exercise 1
+
+* In a circle there are *n* children, all numbered *1, 2, 3,...,n*. Every turn every other child leaves the circle, until there is only one child left. What is the number of this child?
+
+For example, with *n = 7*, the children leave the circle in order 2, 4, 6, 1, 5, 3 and 7, so the last child to remain is number 7.
+
+* Create a method **CircleGame** with the following method:
+* **int Last(int n)** returns the number of the last child from an *n* sized circle.
+
+For example:
+
+```cs
+CircleGame g = new CircleGame();
+Console.WriteLine(g.Last(7)); // 7
+Console.WriteLine(g.Last(4)); // 1
+Console.WriteLine(g.Last(123)); // 119
+```
+
+* This should work with circles up to a million children (I know, that's a lot of people), so be efficient.
+
+
 ## Part 5 - Graphs
 
 * Deadline 9.6. at 23:59
