@@ -261,4 +261,18 @@ source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw
 
 In the picture above we remove 5 from the set {2,3,5,7,8,9}. The node is at the root of the tree and has two children, so we have to look for the smallest object greater than 5, which is 7. Then we swap together the values 5 and 7, after which we can remove the 5 with ease.
 
+## Efficiency of operations
+
+The operations for binary search tree take *O(h)* time, where *h* is the height of the tree, so the efficiency of the operations is dependant on the height of the tree. In other words, the effectiveness of the operations depends on how well we build our tree. 
+
+![Binary search tree 5](https://github.com/centria/algo-and-data/raw/master/assets/images/bst5.png)  
+source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
+
+In the example above, you can see two binary trees for set {1,2,3,4,5}. The height of the left tree is 2, whereas the height of the right tree is 4.
+
+For a binary tree to work efficiently, we don't want the height to become too large. More specificly, our target is to have the nodes split evenly between both sides of the tree and the height would be *O(log n)*. This situation is called a *balanced* tree. If we manage to do this, all the operations can be done in *O(log n)*. 
+
+There are multiple ways to balance a binary search tree. They are, how ever, well beyond the scope of this small course. It is crucial to know, however, that the selection of the root is, even though free, not recommended to be done at random, but with careful thought.
+
+
 [**Exercises here**](https://centria.github.io/algo-and-data/exercises/#part-4---list-and-trees)
