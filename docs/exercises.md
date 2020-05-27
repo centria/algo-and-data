@@ -533,7 +533,7 @@ Console.WriteLine(s.Calculate()); // 1
 
 ### Exercise 4
 
-A binary tree has *n* nodes, numbered *1...n*. You are given the *preorder a* and *in-order b*, and your task is to produce the *post-order* of said tree.
+A binary tree has *n* nodes, numbered *1...n*. You are given the *pre-order a* and *in-order b*, and your task is to produce the *post-order* of said tree.
 
 NOTICE! It is not necessarily a binary search tree, so the nodes can be in any order in the tree.
 

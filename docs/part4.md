@@ -220,7 +220,7 @@ printNode(node)
 ![Binary search tree 1](https://github.com/centria/algo-and-data/raw/master/assets/images/bst1.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-*Binary search tree* is a binary tree, where each node represents an objects in a set. The nodes are ordered in such a manner, that for each node, all the nodes in the subtree are smaller than the node itself, and similarly on the right side, all the nodes in the subtree are of greater value. Because of this, we can easily find a ndoe from the tree by beginning our search from the root.
+*Binary search tree* is a binary tree, where each node represents an objects in a set. The nodes are ordered in such a manner, that for each node, all the nodes in the left subtree are smaller than the node itself, and similarly on the right side, all the nodes in the subtree are of greater value. Because of this, we can easily find a ndoe from the tree by beginning our search from the root.
 
 In the example above, we have a binary search tree representing the set **{2,3,5,7,8,9}**, where the root is 5. On the left subtree are the objects smaller than 5, or the set **{2,3}**. On the right subtree are the objects with greater values than 5, i.e. the set **{7,8,9}**. Notice, that this is one of the many ways to create a binary search tree for said set, and we could choose any of the nodes to be the root.
 
