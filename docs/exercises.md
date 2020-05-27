@@ -467,10 +467,10 @@ Your task is to create a *doubly linked list* with its most common functions.
 
 * Implement class **Node** from the material.
 * Implement class **LinkedList**, with the following methods:
-* **AddFirst(int n)** Adds a **Node** to the beginning of the linked list, with **value** *n*.
-* **AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
-* **RemoveFirst()** Removes the first node from the linked list.
-* **RemoveLast()** Removes the last node from the linked list.
+* **void AddFirst(int n)** Adds a **Node** to the beginning of the linked list, with **value** *n*.
+* **void AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
+* **void RemoveFirst()** Removes the first node from the linked list.
+* **void RemoveLast()** Removes the last node from the linked list.
 * **GetNode(int x)** Get the value of the node in position *x*.
 * **ToString()** returns the all the values of the list, from the beginning to the end.
 
@@ -494,7 +494,7 @@ Console.WriteLine(myLinks.GetNode(1)); // 3
 
 For example, with *n = 7*, the children leave the circle in order 2, 4, 6, 1, 5, 3 and 7, so the last child to remain is number 7.
 
-* Create a method **CircleGame** with the following method:
+* Create a class **CircleGame** with the following method:
 * **int Last(int n)** returns the number of the last child from an *n* sized circle.
 
 For example:
