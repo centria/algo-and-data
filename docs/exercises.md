@@ -609,7 +609,6 @@ static void RandomNodes(BinarySearchTree tree)
     tree.Add(nodeList[remove]);
     // remove the number from index "remove"
     nodeList.RemoveAt(remove);
-
   }
   // Add the last one, remove from the list
   tree.Add(nodeList[0]);
@@ -619,7 +618,6 @@ static void RandomNodes(BinarySearchTree tree)
 
 You can call it with
 
-```cs
 ```cs
 BinarySearchTree bs = new BinarySearchTree();
 RandomNodes(bs);
