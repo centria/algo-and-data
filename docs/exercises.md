@@ -538,7 +538,7 @@ A binary tree has *n* nodes, numbered *1...n*. You are given the *pre-order a* a
 NOTICE! It is not necessarily a binary search tree, so the nodes can be in any order in the tree.
 
 * Create the class **Order** with the following method:
-* **int[] Create(int[] a, int[] b)**, which returns the post-order of the nodes.
+* **Create(int[] a, int[] b)**, which returns the post-order of the nodes.
 
 An example:
 
@@ -548,6 +548,16 @@ int[] a = {4,2,1,3,5};
 int[] b = {2,4,3,1,5};
 int[] c = o.Create(a,b);
 Console.WriteLine(String.Join(" ", c)); // 2 3 5 1 4
+```
+
+NOTICE! Your *Create* method can either return the array, or print the values. This is just as fine:
+
+
+```cs
+Order o = new Order();
+int[] a = {4,2,1,3,5};
+int[] b = {2,4,3,1,5};
+o.Create(a,b); // 2 3 5 1 4
 ```
 
 ### Exercise 5
