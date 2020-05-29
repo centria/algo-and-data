@@ -471,8 +471,8 @@ Your task is to create a *doubly linked list* with its most common functions.
 * **void AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
 * **void RemoveFirst()** Removes the first node from the linked list.
 * **void RemoveLast()** Removes the last node from the linked list.
-* **GetNode(int x)** Get the value of the node in position *x*.
-* **ToString()** returns the all the values of the list, from the beginning to the end.
+* **int GetNode(int x)** Get the value of the node in position *x*.
+* **override string ToString()** returns the all the values of the list, from the beginning to the end.
 
 ```cs
 LinkedList myLinks = new LinkedList();
