@@ -51,7 +51,7 @@ Quite similarly we could create an array list, which allows efficient element re
 ![ArrayList Another](https://github.com/centria/algo-and-data/raw/master/assets/images/arraylist4.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-The image shows an example of the new way of saving our list. The arrow to the right shows the beginning of the list, and the arrow to the left points at the end of the list. When we want to add an element to the beginning, we move left from the left-pointing arrow, and when we want to add to the the end, we move right from the right-pointing arrow. We do the reverse, when we want to remove an element from the list.
+The image shows an example of the new way of saving our list. The arrow to the right shows the beginning of the list, and the arrow to the left points at the end of the list. When we want to add an element to the beginning, we move left from the right-pointing arrow, and when we want to add to the the end, we move right from the left-pointing arrow. We do the reverse, when we want to remove an element from the list.
 
 If the arrows would be next to each other in this arrangement, it can mean two things: The list is either empty, or all of the capacity is in use:
 
