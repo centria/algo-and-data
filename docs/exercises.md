@@ -632,4 +632,4 @@ Console.WriteLine(bs.Height());
 
 ## Part 6 - Implementing data structures
 
-* Deadline 16.5. at 23:59
+* Deadline 16.6. at 23:59
