@@ -55,7 +55,7 @@ source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw
 
 In the example above, the path 1 &#8594; 2 &#8594; 5 has a weight of *5 + 8 = 13*, and path 1 &#8594; 3 &#8594; 4 &#8594; 5 has a weight of *2 + 4 + 3 = 9*.
 
-## Graphs in programming
+# Graphs in programming
 
 There are several ways to represent a graph in programming. Choosing the proper representation is dependant on how we want to handle the graph in our algorithms, as each representation has their benefits. Let's see three ways to represent a graph.
 
