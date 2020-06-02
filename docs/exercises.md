@@ -41,8 +41,7 @@ published: true
 ### Exercise 1
 
 * Create a class **Numbers**, which calculates the sum of the numbers in an integer. For example, with 4075, the sum is 4 + 0 + 7 + 5 = 16. Use the following method:
-
-* **int Sum(int x)**, returns the sum of the numbers in *x*.
+  * **int Sum(int x)**, returns the sum of the numbers in *x*.
 
 For example:
 
@@ -58,8 +57,7 @@ Console.WriteLine(num.Sum(999999999)); // 81
 A *substring* is a string, that is part of another string. For example, in string *aybabtu* some substrings are *bab* and *abtu*.
 
 * With C#, create a class **Substrings**, which has the following method:
-
-* **int Calculate(string a, string b)**, which calculates how many times a substring *b* can be found from the string *a*. For example:
+  * **int Calculate(string a, string b)**, which calculates how many times a substring *b* can be found from the string *a*. For example:
 
 ```cs
 int Calculate(string a, string b)
@@ -81,8 +79,7 @@ Console.WriteLine(subs.Calculate("monkey", "banana")); // 0
 As a parameter, give the program an array with integers. With each step, form a new array, where each element is the sum of two elements that were next to each other in the previous array. Eventually, you will have an array with only one element. For example, with \[1,2,3,2\] should first turn into \[3,5,5\], this into \[8,10\] and finally into \[18\].
 
 * Create a class called **Tables**, which has the following method:
-
-* **int Calculate(int[] t)**, which returns the value of the last element (an integer, not the whole array).
+  * **int Calculate(int[] t)**, which returns the value of the last element (an integer, not the whole array).
 
 The class should work as follows.
 
@@ -102,7 +99,7 @@ HINT! You might want to try recursion. You can do this without it as well, but t
 An integer is a lucky number, if every number in it is either 3 or 7. For example, 3, 7, 33, 37, 73, 77, and 733737 are lucky numbers. Your assigment is to calculate lucky numbers between a...b.
 
 * Create a class **LuckyNumbers**, with the following method:
-* **int Calculate(int a, int b)**, which returns the amount of lucky numbers between two integers.
+  * **int Calculate(int a, int b)**, which returns the amount of lucky numbers between two integers.
 
 The following code represents the usage of the class:
 
@@ -211,7 +208,7 @@ This code is of time efficiency O(n). If you have a more efficient way to do it,
 * You are given an array with *n* integers. Your task is to calculate, how long is the longest section of recurring numbers in the array.
 
 * Create a class **LongestRepetition**, with the following method:
-* **int Calculate(int[] t)**, which returns the length of the longest repetition
+  * **int Calculate(int[] t)**, which returns the length of the longest repetition
 
 The following code represents the behavior:
 
@@ -230,9 +227,9 @@ Console.WriteLine(p.Calculate(new int[] {1,1,1,1,1})); // 5
 * You are given an array with *n* integers. You want to change the array, so that no number is repeated after one another. On each step, you can change any number from the array to be something else. What is the smallest amount of steps?
 
 * For example, in array \[1,1,2,2,2\] the smallest amount of moves is 2. One solution would be to change the array to be \[1,3,2,1,2\].
-
+  
 * Create a class **Changes** with the following method:
-* **int Calculate(int[] t)**, which returns the smallest amount of changes.
+  * **int Calculate(int[] t)**, which returns the smallest amount of changes.
 
 The following code represents the behavior:
 
@@ -253,8 +250,7 @@ Console.WriteLine(m.Calculate(new int[] {1,1,1,1,1})); // 2
 * For example, in array \[4,1,3,2,5\] the amount of revolutions is three, because on the first revolution you pick up 1 and 2, next revolution 3 and on the third one you pick up 4 and 5.
 
 * Create a class **Revolutions** with the following method:
-
-* **int Calculate(int[] t)**, which returns the amount of revolutions.
+  * **int Calculate(int[] t)**, which returns the amount of revolutions.
 
 The following code represents the behavior:
 
@@ -281,8 +277,7 @@ Console.WriteLine(m.Calculate(new int[] {5,4,3,2,1})); // 5
 * In this array the correct answer is 1, as the sums of left and right side are equal only with \[1,2\] and \[-1,4,0\]. Now the sum of both sides is 3.
 
 * Create a class **Split** with the following method:
-
-* **int Calculate(int[] t)**, which returns the amount of possible ways.
+  * **int Calculate(int[] t)**, which returns the amount of possible ways.
 
 The following code represents the behavior:
 
@@ -346,8 +341,7 @@ Hello!
 * You are given an array with *n* integers. Your task is to solve, what is the smallest difference between two elements in the array.
 
 * Create a class **SmallestDifference** with the following method:
-
-* **int Calculate(int[] t)**, which returns the smallest difference between two elements.
+  * **int Calculate(int[] t)**, which returns the smallest difference between two elements.
 
 
 The following code represents the behavior:
@@ -367,8 +361,8 @@ Console.WriteLine(s.Calculate(Randomizer(10))); // depends on random
 * I suggest you use the base from the material, linked in the bullet point above. **DO NOT USE built-in sorts!**
 
 * Create a class **Sorting** with the following methods:
-* **void MergeSort(int[] t)**, which sorts the list and prints how long it took.
-* **void QuickSort(int[] t)**, which sorts the list and prints how long it took.
+  * **void MergeSort(int[] t)**, which sorts the list and prints how long it took.
+  * **void QuickSort(int[] t)**, which sorts the list and prints how long it took.
 
 * Measure the time taken for both algorithms. 
 
@@ -417,8 +411,7 @@ s.MergeSort(sortMeLarge);
 * You can review the algorithm structure [**from here**](https://centria.github.io/algo-and-data/part3/#binary-search).
 
 * Create a class **BinarySearch** with the following method:
-
-* **bool Find(int[] t, int x)**, which returns if the array contains x or not.
+  * **bool Find(int[] t, int x)**, which returns if the array contains x or not.
 
 
 The following code represents the behavior:
@@ -437,8 +430,7 @@ Console.WriteLine(b.Find(Randomizer(100000), 3)); // depends on Random
 * Your task is to *create* an array with *n* integers, which contains the numbers *1...n* and it has **exactly** *k* inversions. You can create any array, which fulfills these criteria.
 
 * Create a class **Inversions**, with the following method:
-
-* **int[] Create(int n, int k)**, which returns the array.
+  * **int[] Create(int n, int k)**, which returns the array.
 
 
 The following code represents the behavior:
@@ -467,12 +459,12 @@ Your task is to create a *doubly linked list* with its most common functions.
 
 * Implement class **Node** from the material.
 * Implement class **LinkedList**, with the following methods:
-* **void AddFirst(int n)** Adds a **Node** to the beginning of the linked list, with **value** *n*.
-* **void AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
-* **void RemoveFirst()** Removes the first node from the linked list.
-* **void RemoveLast()** Removes the last node from the linked list.
-* **int GetNode(int x)** Get the value of the node in position *x*.
-* **override string ToString()** returns the all the values of the list, from the beginning to the end.
+  * **void AddFirst(int n)** Adds a **Node** to the beginning of the linked list, with **value** *n*.
+  * **void AddLast(int n)** Adds a **Node** to the end of the linked list, with **value** *n*.
+  * **void RemoveFirst()** Removes the first node from the linked list.
+  * **void RemoveLast()** Removes the last node from the linked list.
+  * **int GetNode(int x)** Get the value of the node in position *x*.
+  * **override string ToString()** returns the all the values of the list, from the beginning to the end.
 
 ```cs
 LinkedList myLinks = new LinkedList();
@@ -495,7 +487,7 @@ Console.WriteLine(myLinks.GetNode(1)); // 3
 For example, with *n = 7*, the children leave the circle in order 2, 4, 6, 1, 5, 3 and 7, so the last child to remain is number 7.
 
 * Create a class **CircleGame** with the following method:
-* **int Last(int n)** returns the number of the last child from an *n* sized circle.
+  * **int Last(int n)** returns the number of the last child from an *n* sized circle.
 
 For example:
 
@@ -514,8 +506,8 @@ Console.WriteLine(g.Last(123)); // 119
 Your task is to create a class, which keeps a collection of numbers. The collection can be added numbers into and it can be asked, what is the smallest distance between two numbers.
 
 * Create a class **SmallestDistance** with the following methods:
-* **void Add(int x)**
-* **int Calculate()**: returns the smallest distance between two integers.
+  * **void Add(int x)**
+  * **int Calculate()**: returns the smallest distance between two integers.
 
 The following represents the functionality:
 
@@ -538,7 +530,7 @@ A binary tree has *n* nodes, numbered *1...n*. You are given the *pre-order a* a
 NOTICE! It is not necessarily a binary search tree, so the nodes can be in any order in the tree.
 
 * Create the class **Order** with the following method:
-* **Create(int[] a, int[] b)**, which returns the post-order of the nodes.
+  * **Create(int[] a, int[] b)**, which returns the post-order of the nodes.
 
 An example:
 
@@ -567,8 +559,8 @@ You task is to implement a *binary search tree*, where you can add new nodes and
 If the numbers would be added in order, they would all go into a single line, and the tree would have a very large height. What happens, if you add them in *random* order?
 
 * Create a class **BinarySearchTree** and in it the methods:
-* **void Add(int x)**, adds the integer *x* to your tree.
-* **int Height()**, which returns the height of the tree.
+  * **void Add(int x)**, adds the integer *x* to your tree.
+  * **int Height()**, which returns the height of the tree.
 
 * Add some numbers (1 to 50 or similar) to your tree in random order, and print the result of **Height**. Do this at least three times and save the results.
 
