@@ -630,6 +630,52 @@ Console.WriteLine(bs.Height());
 
 * Deadline 9.6. at 23:59
 
+### Exercise 1
+
+DFS and BFS are the common ways to traverse through a graph. In some cases we can use either of them, but sometimes only one will work the way we want.
+
+* Which algorithm can be used in the following tasks? In each one we have an undirected graph. Choose from the options for each question.
+
+1. Is the graph connected?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+2. Is there a path from node *a* to node *b*?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+3. How long is the shortest path from node *a* to node *b*?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+4. How many connected components the graph has?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+5. Is there a cycle in the graph?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+6. Is the graph a tree?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+7. What is the node furthest away from node *x*?
+   * Only depth-first search
+   * Only breadth-first search
+   * Both
+
+* Return your answers in a single file in the repository, preferably MD or TXT file.
+
+
+### Exercise 2
+
+### Exercise 3
+
+### Exercise 4
+
+### Exercise 5
+
 ## Part 6 - Shortest paths
 
 * Deadline 16.6. at 23:59

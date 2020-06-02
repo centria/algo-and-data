@@ -12,3 +12,5 @@ Here will be more.
 ## Bellman-Ford algorithm
 
 ## Dijkstra's algorithm
+
+## Floyd-Warshall algorithm

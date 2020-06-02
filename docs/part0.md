@@ -16,7 +16,7 @@ The list below does not include everything, but exists to give a guideline for s
 | 3| You understand recursion and can use it in problem solving. You know of different sorting algorithms and their differences. |
 | 4| You know of the *list* and *tree* data structures, especially binary search tree. |
 | 5| You understand the basics of *graph* data structures and searching them with *DFS* and *BFS*. |
-| 6| You know of Bellman-Ford and Djikstra's algorithms and understand their basic functionality. |
+| 6| You know of Bellman-Ford, Djikstra's and Floyd-Warshall algorithms and understand their basic functionality. |
 
 
 ## How does this course work?
