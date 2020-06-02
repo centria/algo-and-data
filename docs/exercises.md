@@ -670,11 +670,91 @@ DFS and BFS are the common ways to traverse through a graph. In some cases we ca
 
 ### Exercise 2
 
+A network comprises of *n* computers, which are labeled *1, 2, ..., n*. In the network there is a set of connections, through which information can be sent both ways. Your task is to find out, how with how many computers can a certain computer communicate.
+
+NOTICE! In this and the following exercises, the computers can communicate with each other, if there is a connection between through other computers!
+
+* Create a class **Connectivity**, with the following methods:
+  * **Connectivity(int n)**, the amount of computers is given in the constructor.
+  * **void AddConnection(int a, int b)**, adds a connection between *a* and *b*.
+  * **int Calculate(int x)**, returns the amount of computers with which *x* can communicate.
+
+Example code:
+
+```cs
+Connectivity c = new Connectivity(6);
+c.AddConnection(1,2);
+c.AddConnection(2,3);
+c.AddConnection(1,3);
+c.AddConnection(3,4);
+c.AddConnection(5,6);
+Console.WriteLine(c.Calculate(1)); // 3
+```
+
 ### Exercise 3
+
+A network comprises of *n* computers, which are labeled *1, 2, ..., n*. In the network there is a set of connections, through which information can be sent both ways. Two computers belong in the same *component*, if they can communicate with each other. Your task is to calculate the amount of components.
+
+* Create the class **Components**, with the following methods:
+  * **Components(int n)**, the amount of computers is given to the constructor.
+  * **void AddConnection(int a, int b)**, adds a connection between *a* and *b*.
+  * **int Calculate()**, returns the amount of components.
+
+Example code:
+
+```cs
+Components k = new Components(6);
+k.AddConnection(1,2);
+k.AddConnection(2,3);
+k.AddConnection(1,3);
+k.AddConnection(3,4);
+k.AddConnection(5,6);
+Console.WriteLine(k.Calculate()); // 2
+```
 
 ### Exercise 4
 
+A network comprises of *n* computers, which are labeled *1, 2, ..., n*. In the network there is a set of connections, through which information can be sent both ways. You are given pairs of computers and your task is to find out, if they can communicate with one another.
+
+* Create a class **Communication**, with the following methods:
+  * **Communication(int n)**, the amount of computers is given to the constructor as a parameter.
+  * **void AddConnection(int a, int b)**, adds a connection between *a* and *b*.
+  * **bool Examine(int x, int y)**, returns *true* if there is a connection between *x* and *y*, otherwise returns *false*.
+
+```cs
+Communication com = new Communication(6);
+com.AddConnection(1,2);
+com.AddConnection(2,3);
+com.AddConnection(1,3);
+com.AddConnection(3,4);
+com.AddConnection(5,6);
+Console.WriteLine(com.Examine(1,4)); // true
+Console.WriteLine(com.Examine(2,5)); // false
+Console.WriteLine(com.Examine(5,6)); // true
+```
+
+
 ### Exercise 5
+
+Your task is to find the shortest path from *x* to *y* in a labyrinth. The labyrinth is a matrix of *n * m* size, and is constructed as follows: *#* means a wall, and *.* means a floor. You can assume that all the tiles on the outside are walls, and there is exactly one *x* and one *y* in the grid.
+
+On a single turn, you can move one step left, right, up or down. You have to give the route of the shortest path as a string, which is made from characters *L*, *R*, *U* and *D* respectively. If there are multiple routes, you can return any of them.
+
+* Create a class **Labyrinth** with the following method:
+  * **string Search(char[,] laby)**, returns the description of the shortest path (if there is none, returns null or empty string)
+
+Example code:
+
+```cs
+Labyrinth l = new Labyrinth();
+char[,] c = {{'#','#','#','#','#','#','#'},
+              {'#','x','#','.','y','.','#'},
+              {'#','.','#','.','#','.','#'},
+              {'#','.','.','.','.','.','#'},
+              {'#','#','#','#','#','#','#'}};
+Console.WriteLine(l.Search(t)); // DDRRYYR
+```
+
 
 ## Part 6 - Shortest paths
 
