@@ -93,7 +93,7 @@ graph[3].Add(4);
 graph[4].Add(5);
 ```
 
-Adjacency list is a quite often a useful way to create a graph, as we might for example want to find out, which ndos we can get to from a certain node, traversing the edges. For example, the following code goes through all the nodes, we can traverse to from node *x*:
+Adjacency list is a quite often a useful way to create a graph, as we might for example want to find out, which nodes we can get to from a certain node, traversing the edges. For example, the following code goes through all the nodes, we can traverse to from node *x*:
 
 ```cs
 foreach (int i in graph[x])
