@@ -204,11 +204,11 @@ How could we use DFS? Here are a few examples for usage:
 
 With DFS we can find a path from node *a* to node *b*, if such a path exists. This is done by starting the search from node *a* and returning, when we get to node *b*. If there are several paths, DFS will find one of them, depending on the handling order of the nodes.
 
-## Connections and components
+### Connections and components
 
 An undirected graph is connected, if all the nodes are connected to each other. We can examine the connections of a graph by starting our search from any node and examining, if the search reaches all the nodes of the graph. In addition, we can find all the connected components of the graph by going through the nodes and beginning a new search, whenever we come across an unvisited node. Each search thus forms one component.
 
-## Finding cycles
+### Finding cycles
 
 If an undirected graph contains a cycle, we notice this with DFS, if we come to a visited node via another route (than the one we have used to get there earlier). Thus we can find a cycle from the graph, if such exists.
 
