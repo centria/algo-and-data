@@ -750,7 +750,7 @@ char[,] c =
 {'#','.','#','.','#','.','#'},
 {'#','.','.','.','.','.','#'},
 {'#','#','#','#','#','#','#'} };
-Console.WriteLine(l.Search(c)); // DDRRYYR
+Console.WriteLine(l.Search(c)); // DDRRUUR
 ```
 
 
