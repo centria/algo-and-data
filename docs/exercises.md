@@ -737,7 +737,7 @@ On a single turn, you can move one step left, right, up or down. You have to giv
 
 Example code:
 
-```console
+```cs
 Labyrinth l = new Labyrinth();
 char[,] c = {{'#','#','#','#','#','#','#'},
               {'#','x','#','.','y','.','#'},
