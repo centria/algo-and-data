@@ -244,12 +244,17 @@ First we add the root-node to the queue and mark we have visited it, and the dis
 
 ## Example: Labyrinth
 
-We are in a labyrinth and we want to get from square *A* to square *B*. With each turn, we can move one step up, down, left or right. Can we get from *A* to *B*, and if we can, what is the shortest possible route? In the example below, the shortest path from *A* to *B* is formed with 9 steps. The left side illustrates the labyrinth, and the right side the same situation as a graph.
+We are in a labyrinth and we want to get from square *A* to square *B*. With each turn, we can move one step up, down, left or right. Can we get from *A* to *B*, and if we can, what is the shortest possible route? 
+
+
+We can illustrate the problem as a graph, so that each floor square is a node in our graph and there is an edge between two nodes, if they are next to each other in the labyrinth. In the example below, the shortest path from *A* to *B* is formed with 9 steps. The left side illustrates the labyrinth, and the right side the same situation as a graph.
 
 ![Labyrinth](https://github.com/centria/algo-and-data/raw/master/assets/images/labyrinth.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-Notice, that we do not have to separately change the labyrinth into a graph, but we can do the search on *implicit graph*. This means, that we do the search to the labyrinth in its own presentation form. In practice, the labyrinth is handly to save as a two-dimensional array, which tells which squares are walls. Then we can do for example a BFS like follows:
+Using this illustration, there is a path from *a* to *b* exactly when the nodes of the corresponding graph are a part of the same component. We can check with DFS, if there is a path from *a* to *b*. The shortest path from *a* to *b* can be found with *BFS*, which starts from *a*.
+
+Notice, that we do not have to separately change the labyrinth into a graph, but we can do the search on *implicit graph*. This means, that we do the search to the labyrinth in its own presentation form. In practice, the labyrinth is handly to save as a two-dimensional array, which tells which squares are walls. Then we can do for example a DFS like follows:
 
 ```console
 search(y, x)
