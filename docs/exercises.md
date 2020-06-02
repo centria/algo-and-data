@@ -630,6 +630,6 @@ Console.WriteLine(bs.Height());
 
 * Deadline 9.6. at 23:59
 
-## Part 6 - Implementing data structures
+## Part 6 - Shortest paths
 
 * Deadline 16.6. at 23:59
