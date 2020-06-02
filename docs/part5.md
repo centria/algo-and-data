@@ -252,9 +252,9 @@ We can illustrate the problem as a graph, so that each floor square is a node in
 ![Labyrinth](https://github.com/centria/algo-and-data/raw/master/assets/images/labyrinth.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-Using this illustration, there is a path from *a* to *b* exactly when the nodes of the corresponding graph are a part of the same component. We can check with DFS, if there is a path from *a* to *b*. The shortest path from *a* to *b* can be found with *BFS*, which starts from *a*.
+Using this illustration, there is a path from *A* to *B* exactly when the nodes of the corresponding graph are a part of the same component. We can check with DFS, if there is a path from *A* to *B*. The shortest path from *A* to *B* can be found with *BFS*, which starts from *A*.
 
-Notice, that we do not have to separately change the labyrinth into a graph, but we can do the search on *implicit graph*. This means, that we do the search to the labyrinth in its own presentation form. In practice, the labyrinth is handly to save as a two-dimensional array, which tells which squares are walls. Then we can do for example a DFS like follows:
+Notice, that we do not have to separately change the labyrinth into a graph, but we can do the search on *implicit graph*. This means, that we do the search to the labyrinth in its own presentation form. In practice, the labyrinth is handly to save as a two-dimensional array, which tells which squares are walls. Then we can do for example a *DFS* like follows:
 
 ```console
 search(y, x)
@@ -269,7 +269,7 @@ search(y, x)
   search(y, x-1)
 ```
 
-We begin our search from a coordinate *y,x*. Our first check is to determine we keep inside our grid, and the second one to make sure we have not come to a wall or visited the node already. Then we search all the neighboring nodes recursively, in order up, down, right, left.
+We begin our search from a coordinate *y,x*. Our first check is to determine we keep inside our grid, and the second one to make sure we have not come to a wall or visited the node already. Then we search all the neighboring nodes recursively, in order up, down, right, left. This will find us *some path* from *A* to *B*, but not necessarily the shortest one.
 
 
 
