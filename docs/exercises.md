@@ -735,18 +735,7 @@ On a single turn, you can move one step left, right, up or down. You have to giv
 * Create a class **Labyrinth** with the following method:  
   * **string Search(char\[,\] laby)**, returns the description of the shortest path (if there is none, returns null or empty string)
   
-Example code:
-  
-{% raw %}
-Labyrinth l = new Labyrinth();
-char[,] c = 
-{{'#','#','#','#','#','#','#'},
-{'#','x','#','.','y','.','#'},
-{'#','.','#','.','#','.','#'},
-{'#','.','.','.','.','.','#'},
-{'#','#','#','#','#','#','#'}};
-Console.WriteLine(l.Search(c)); // DDRRYYR
-{% endraw %}
+Example code will come soon.
 
 
 ## Part 6 - Shortest paths
