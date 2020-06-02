@@ -249,7 +249,7 @@ We are in a labyrinth and we want to get from square *A* to square *B*. With eac
 ![Labyrinth](https://github.com/centria/algo-and-data/raw/master/assets/images/labyrinth.png)  
 source: [**Tietorakenteet ja algoritmit**](https://github.com/pllk/tirakirja/raw/master/tirakirja.pdf)
 
-Notice, that we do not have to separately change the labyrinth into a graph, but we can do the search on *implicit graph*. This means, that we do the search to the labyrinth in its own presentation form. In practice, the labyrinth is handly to save as a two-dimensional array, which tells which squares are walls. Then we can do for example a DFS like follows:
+Notice, that we do not have to separately change the labyrinth into a graph, but we can do the search on *implicit graph*. This means, that we do the search to the labyrinth in its own presentation form. In practice, the labyrinth is handly to save as a two-dimensional array, which tells which squares are walls. Then we can do for example a BFS like follows:
 
 ```console
 search(y, x)
