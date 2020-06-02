@@ -733,7 +733,7 @@ Your task is to find the shortest path from *x* to *y* in a labyrinth. The labyr
 On a single turn, you can move one step left, right, up or down. You have to give the route of the shortest path as a string, which is made from characters *L*, *R*, *U* and *D* respectively. If there are multiple routes, you can return any of them.
 
 * Create a class **Labyrinth** with the following method:
-  * **string Search(char[,] laby)**, returns the description of the shortest path (if there is none, returns null or empty string)
+  * **string Search(char\[,\] laby)**, returns the description of the shortest path (if there is none, returns null or empty string)
 
 Example code:
 
