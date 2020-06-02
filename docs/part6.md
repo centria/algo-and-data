@@ -1,14 +1,14 @@
 ---
-title: "Part 6 - Implementing data structures"
+title: "Part 6 - Shortest paths"
 permalink: /part6/
 nav_order: 8
 published: true
 ---
 
-# Implementing data structures in C#
+# Shortest paths in graphs
 
 Here will be more.
 
-## List
+## Bellman-Ford algorithm
 
-## Tree
+## Dijkstra's algorithm
