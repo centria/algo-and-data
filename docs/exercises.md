@@ -737,7 +737,7 @@ On a single turn, you can move one step left, right, up or down. You have to giv
   
 Example code:
   
-{% highlight cs %}
+{% raw %}
 Labyrinth l = new Labyrinth();
 char[,] c = 
 {{'#','#','#','#','#','#','#'},
@@ -745,8 +745,8 @@ char[,] c =
 {'#','.','#','.','#','.','#'},
 {'#','.','.','.','.','.','#'},
 {'#','#','#','#','#','#','#'}};
-Console.WriteLine(l.Search(t)); // DDRRYYR
-{% endhighlight %}
+Console.WriteLine(l.Search(c)); // DDRRYYR
+{% endraw %}
 
 
 ## Part 6 - Shortest paths
