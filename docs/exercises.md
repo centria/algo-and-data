@@ -753,9 +753,10 @@ char[,] c =
 Console.WriteLine(l.Search(c)); // DDRRUUR
 ```
 
-HINT! You can save the width *n* and the height *m* with the following code:
-
 HINT! For the shortest path, you have to make a breadth-first search (BFS).
+
+
+HINT! You can save the width *n* and the height *m* with the following code:
 
 ```cs
 int n = laby.GetLength(0);
