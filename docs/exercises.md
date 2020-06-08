@@ -845,7 +845,7 @@ In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way stre
 * Create a class **ShortestPath** with following methods:
   * **ShortestPath(int n)**, the amount of cities given in the constructor
   * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
-  * **List<int> Create(int x, int y)** returns the shortest distance from city *x* to city *y* as a list of cities (null or empty list, if there is no connection).
+  * **List\<int\> Create(int x, int y)** returns the shortest distance from city *x* to city *y* as a list of cities (null or empty list, if there is no connection).
 
 
 Example code:
