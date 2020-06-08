@@ -735,12 +735,8 @@ On a single turn, you can move one step left, right, up or down. You have to giv
 * Create a class **Labyrinth** with the following method:  
   * **string Search(char\[,\] laby)**, returns the description of the shortest path (if there is none, returns null or empty string).      
   
-  
-  
-  
 Example code:          
-  
-  
+
   
 ```cs
 Labyrinth l = new Labyrinth();
@@ -766,3 +762,100 @@ int m = laby.GetLength(1);
 ## Part 6 - Shortest paths
 
 * Deadline 16.6. at 23:59
+
+* 4 exercises, each exercise is worth *3* points (rather than 2)
+  * A total of 12 is up for grabs, rather than the regular 10.
+  * More points means harder exercises, as usual.
+
+* HINT! Use the pseudo codes from the material as much as possible!
+
+### Exercise 1
+
+In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Bellman-Ford*.  
+
+* Create a class **ShortestPath** with following methods:
+  * **ShortestPath(int n)**, the amount of cities given in the constructor
+  * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
+  * **int Calculate(int x, int y)** returns the shortest distance from city *x* to city *y* (or -1, if there is no connection).
+
+Example code:
+
+```cs
+ShortestPath l = new ShortestPath(5);
+l.AddRoad(1,2,7);
+l.AddRoad(2,4,2);
+l.AddRoad(1,3,6);
+l.AddRoad(3,4,5);
+l.AddRoad(4,5,3);
+Console.WriteLine(l.Calculate(1,5)); // 12
+```
+
+### Exercise 2
+
+In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Dijkstra's algorithm*.  
+
+* Create a class **ShortestPath** with following methods:
+  * **ShortestPath(int n)**, the amount of cities given in the constructor
+  * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
+  * **int Calculate(int x, int y)** returns the shortest distance from city *x* to city *y* (or -1, if there is no connection).
+
+Example code:
+
+```cs
+ShortestPath l = new ShortestPath(5);
+l.AddRoad(1,2,7);
+l.AddRoad(2,4,2);
+l.AddRoad(1,3,6);
+l.AddRoad(3,4,5);
+l.AddRoad(4,5,3);
+Console.WriteLine(l.Calculate(1,5)); // 12
+```
+
+
+### Exercise 3
+
+In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Floyd-Warshall*.  
+
+* Create a class **ShortestPath** with following methods:
+  * **ShortestPath(int n)**, the amount of cities given in the constructor
+  * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
+  * **int Calculate(int x, int y)** returns the shortest distance from city *x* to city *y* (or -1, if there is no connection).
+
+Example code:
+
+```cs
+ShortestPath l = new ShortestPath(5);
+l.AddRoad(1,2,7);
+l.AddRoad(2,4,2);
+l.AddRoad(1,3,6);
+l.AddRoad(3,4,5);
+l.AddRoad(4,5,3);
+Console.WriteLine(l.Calculate(1,5)); // 12
+```
+
+The teacher's test code can call the methdod *AddRoad* and *Calculate* both 10000 times. This means that only Floyd-Warshall is fast enough!
+
+HINT! First calculate all the results and save them, then Calculate only searches the results!
+
+
+### Exercise 4
+
+In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*. You can use any algorithm of your choosing.
+
+* Create a class **ShortestPath** with following methods:
+  * **ShortestPath(int n)**, the amount of cities given in the constructor
+  * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
+  * **List<int> Create(int x, int y)** returns the shortest distance from city *x* to city *y* as a list of cities (null or empty list, if there is no connection).
+
+
+Example code:
+
+```cs
+ShortestPath l = new ShortestPath(5);
+l.AddRoad(1,2,7);
+l.AddRoad(2,4,2);
+l.AddRoad(1,3,6);
+l.AddRoad(3,4,5);
+l.AddRoad(4,5,3);
+l.Create(1,5).ForEach(Console.Write); // 1245
+```

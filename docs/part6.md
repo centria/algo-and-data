@@ -109,7 +109,7 @@ Dijkstra's algorithm is a *greedy algorithm*, as at each step it searches non-vi
 
 We can think of this matter from another perspective: If the distance could be still improved, the graph should have at least one another non-visited node, via which we could form a shorter path. As we know that all the other paths available are greater or equal than the one we are visiting and the distance for those nodes cannot become shorter, as there are no negative edges in the graph. For this reason we can safely choose to visit the node with the smallest distance and fix its distance.
 
-So the Dijkstra algorithm works correctly, if there are no negative edges in the graph, but how fast is it? First the algorithm goes through the edges and nodes of the graph, taking *O(m + n)* time. The main part of the algorithm goes through the set of all the nodes in *O(n)*, and for each node *n* a maximum of *O(m)* edges, creating a time complexity of *O(m^2)*. As we know, this is not very fast. 
+So the Dijkstra algorithm works correctly, if there are no negative edges in the graph, but how fast is it? First the algorithm goes through the edges and nodes of the graph, taking *O(m + n)* time. The main part of the algorithm goes through the set of all the nodes in *O(n)*, and for each node *n* a maximum of *O(m)* edges, creating a time complexity of *O(m^2)*. As we know, this is not very fast. If we use an adjacency list as our data structure rather than an array, we can optimize our solution up to *O(n + m log n)*.
 
 
 There is another way to do create the algorithm, and that is with a *priority queue* (also known as *heap*). Unfortunately, that has not been implemented in C#, but let's look at that as well:
@@ -129,9 +129,9 @@ while not heap.empty()
       heap.push((new,edge.end))
 ```
 
-This example uses an adjacency list. Notice, that in the heap there can be *multiple* distances for a node in the heap, as we add a new node to the heap each time the distance improves. We will visit each node only once, as every time we get a new node from the heap for visiting, we first make sure that we have not visited said node earlier.
+Notice, that in the heap there can be *multiple* distances for a node in the heap, as we add a new node to the heap each time the distance improves. We will visit each node only once, as every time we get a new node from the heap for visiting, we first make sure that we have not visited said node earlier.
 
-This implementation first goes through all the nodes and edges in time *O(n+m)*. The heap requires operations, and at worst case for each edge we have to add another element to the heap, which takes *O(m log m)*. On the other hand, we will eventually remove all the nodes from the heap, taking also *O(m log m)*. Thus the complete time complexity for this implementation is *O(n + m log m)*.
+This implementation first goes through all the nodes and edges in time *O(n+m)*. The heap requires operations, and at worst case for each edge we have to add another element to the heap, which takes *O(m log m)*. On the other hand, we will eventually remove all the nodes from the heap, taking also *O(m log m)*. Thus the complete time complexity for this implementation is *O(n + m log m)*. We can clean this up a bit, since we can assume there are no two edges with the same start and end nodes are the same, resulting in *O(n + m log n)*.
 
 What happens, if the graph does have a negative edge? Then the Dijkstra's algorithm doesn't necessarily work correctly. In the example below, the greedy algorithm takes the upper path and decides that shortest distance from *1* to *5* is *8*. However, the actually shortest distance would be the path below, whose distance is only *6*.
 
