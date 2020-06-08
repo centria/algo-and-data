@@ -781,13 +781,13 @@ In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way stre
 Example code:
 
 ```cs
-ShortestPath l = new ShortestPath(5);
-l.AddRoad(1,2,7);
-l.AddRoad(2,4,2);
-l.AddRoad(1,3,6);
-l.AddRoad(3,4,5);
-l.AddRoad(4,5,3);
-Console.WriteLine(l.Calculate(1,5)); // 12
+ShortestPath s = new ShortestPath(5);
+s.AddRoad(1,2,7);
+s.AddRoad(2,4,2);
+s.AddRoad(1,3,6);
+s.AddRoad(3,4,5);
+s.AddRoad(4,5,3);
+Console.WriteLine(s.Calculate(1,5)); // 12
 ```
 
 ### Exercise 2
@@ -802,13 +802,13 @@ In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way stre
 Example code:
 
 ```cs
-ShortestPath l = new ShortestPath(5);
-l.AddRoad(1,2,7);
-l.AddRoad(2,4,2);
-l.AddRoad(1,3,6);
-l.AddRoad(3,4,5);
-l.AddRoad(4,5,3);
-Console.WriteLine(l.Calculate(1,5)); // 12
+ShortestPath s = new ShortestPath(5);
+s.AddRoad(1,2,7);
+s.AddRoad(2,4,2);
+s.AddRoad(1,3,6);
+s.AddRoad(3,4,5);
+s.AddRoad(4,5,3);
+Console.WriteLine(s.Calculate(1,5)); // 12
 ```
 
 
@@ -824,13 +824,13 @@ In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way stre
 Example code:
 
 ```cs
-ShortestPath l = new ShortestPath(5);
-l.AddRoad(1,2,7);
-l.AddRoad(2,4,2);
-l.AddRoad(1,3,6);
-l.AddRoad(3,4,5);
-l.AddRoad(4,5,3);
-Console.WriteLine(l.Calculate(1,5)); // 12
+ShortestPath s = new ShortestPath(5);
+s.AddRoad(1,2,7);
+s.AddRoad(2,4,2);
+s.AddRoad(1,3,6);
+s.AddRoad(3,4,5);
+s.AddRoad(4,5,3);
+Console.WriteLine(s.Calculate(1,5)); // 12
 ```
 
 The teacher's test code can call the methdod *AddRoad* and *Calculate* both 10000 times. This means that only Floyd-Warshall is fast enough!
@@ -851,11 +851,11 @@ In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way stre
 Example code:
 
 ```cs
-ShortestPath l = new ShortestPath(5);
-l.AddRoad(1,2,7);
-l.AddRoad(2,4,2);
-l.AddRoad(1,3,6);
-l.AddRoad(3,4,5);
-l.AddRoad(4,5,3);
-l.Create(1,5).ForEach(Console.Write); // 1245
+ShortestPath s = new ShortestPath(5);
+s.AddRoad(1,2,7);
+s.AddRoad(2,4,2);
+s.AddRoad(1,3,6);
+s.AddRoad(3,4,5);
+s.AddRoad(4,5,3);
+s.Create(1,5).ForEach(Console.Write); // 1245
 ```
