@@ -769,6 +769,8 @@ int m = laby.GetLength(1);
 
 * HINT! Use the pseudo codes from the material as much as possible!
 
+* Try to do these (at least first) without getting the algorithms from the internet. Dijkstra's algorithm can be quite difficult, so in this part's exercises, finding ready code from google might help understand the algorithms better.
+
 ### Exercise 1
 
 In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Bellman-Ford*.  
