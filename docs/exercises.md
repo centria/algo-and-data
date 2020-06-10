@@ -842,7 +842,7 @@ HINT! First calculate all the results and save them, then Calculate only searche
 
 ### Exercise 4
 
-In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*. You can use any algorithm of your choosing.
+In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest route between cities *x* and *y*. You can use any algorithm of your choosing.
 
 * Create a class **ShortestPath** with following methods:
   * **ShortestPath(int n)**, the amount of cities given in the constructor
