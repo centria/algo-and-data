@@ -775,7 +775,7 @@ int m = laby.GetLength(1);
 
 In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Bellman-Ford*.  
 
-* Create a class **ShortestPath** with following methods:
+* Create a class **ShortestPath** (or for example **BellmanFord**, if you want exercises 1-3 to be in same namespace) with following methods:
   * **ShortestPath(int n)**, the amount of cities given in the constructor
   * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
   * **int Calculate(int x, int y)** returns the shortest distance from city *x* to city *y* (or -1, if there is no connection).
@@ -796,7 +796,7 @@ Console.WriteLine(s.Calculate(1,5)); // 12
 
 In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Dijkstra's algorithm*.  
 
-* Create a class **ShortestPath** with following methods:
+* Create a class **ShortestPath** (or for example **Dijkstra**, if you want exercises 1-3 to be in same namespace) with following methods:
   * **ShortestPath(int n)**, the amount of cities given in the constructor
   * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
   * **int Calculate(int x, int y)** returns the shortest distance from city *x* to city *y* (or -1, if there is no connection).
@@ -818,7 +818,7 @@ Console.WriteLine(s.Calculate(1,5)); // 12
 
 In a Bitworld there are *n* cities, numbered *1,2,...,n*. There are two-way streets between those cities, with certain lengths. Your task is to find out the shortest distance between cities *x* and *y*, using *Floyd-Warshall*.  
 
-* Create a class **ShortestPath** with following methods:
+* Create a class **ShortestPath** (or **FloydWarshall**, if you want exercises 1-3 to be in same namespace) with following methods:
   * **ShortestPath(int n)**, the amount of cities given in the constructor
   * **void AddRoad(int a, int b, int d)**: Adds a road between cities *a* and *b*, with the distance *d*
   * **int Calculate(int x, int y)** returns the shortest distance from city *x* to city *y* (or -1, if there is no connection).
