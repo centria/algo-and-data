@@ -866,7 +866,7 @@ fw.AddRoad(2, 4, 2);
 fw.AddRoad(1, 3, 6);
 fw.AddRoad(3, 4, 5);
 fw.AddRoad(4, 5, 3);
-Console.WriteLine(fw.Calculate(1, 2)); // 12
+Console.WriteLine(fw.Calculate(1, 5)); // 12
 ```
 
 The teacher's test code can call the methdod *AddRoad* and *Calculate* both 10000 times. This means that only Floyd-Warshall is fast enough!
