@@ -52,4 +52,4 @@ The exercise sessions are held in **Teams**, and are completely voluntary. These
 | 48-53 |   4   |
 | 54-60 |   5   |
 
-* In the fall, after the corona virus situation, there will be an exam. The exam is graded pass/fail, and is made to ensure that the student has learnt the subject, and truly made the exercises themselves. The exam date will be decided later.
+* Due to the corona virus situation, the exam has been postponed to fall, to 9.10.2020. The exam is graded, and the better grade will stand (either the exam grade or the exercise grade). The exam is compulsory, even if you have passing grade with the exercises.
