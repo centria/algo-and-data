@@ -113,7 +113,7 @@ f.AddConnection("tampere", "oulu", 100);
 f.AddConnection("oulu", "vaasa", 100);
 f.AddConnection("helsinki", "turku", 500);
 f.AddConnection("turku", "vaasa", 700);
-Console.WriteLine(l.RoutePrice("helsinki","vaasa")); // 1200
+Console.WriteLine(f.RoutePrice("helsinki","vaasa")); // 1200
 ```
 
 Notife, that it would be cheaper to travel via *tampere* and *oulu*, but this would mean three flights, whereas the best route through *turku* only has two flights.
