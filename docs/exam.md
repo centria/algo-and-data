@@ -44,7 +44,7 @@ Console.WriteLine(num.Steps(2)); // 2
 
 ### Exercise 2
 
-You are given a array with *n* integers. With each step you can choose two adjacent integers and remove them from the array. You want to remove as many integers as possible.
+You are given a array with *n* integers. With each step you can choose *two adjacent integers of same value* and remove them from the array. You want to remove as many integers as possible.
 
 For example if the array is \[1,2,2,1,1,1,3\], you can do the removals like this:
 * \[1,2,2,1,1,1,3\]
