@@ -7,7 +7,7 @@ published: true
 
 # Preparations for the exam
 
-* The exam will be held 9.10.2020 at 10.00.
+* The exam will be held *23.10.2020 at 10.00*. NOTICE THE NEW DATE!
   * DON'T BE LATE
 * The exam will be done on school computers
   * No own devices allowed
@@ -23,7 +23,7 @@ As promised, you can do exercises to rehearse for the exam. These exercises can 
 
 * Do these exercises in the same repository as you did your course exercises.
 * Make a separate folder for these in the the repository
-* Deadline is before the exam
+* Deadline is *9.10. at 23.59*
 * Same rules apply as with regular exercises, i.e. you can get points for trying and pseudocode
 
 ### Exercise 1
