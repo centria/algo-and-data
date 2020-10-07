@@ -23,7 +23,7 @@ As promised, you can do exercises to rehearse for the exam. These exercises can 
 
 * Do these exercises in the same repository as you did your course exercises.
 * Make a separate folder for these in the the repository
-* Deadline is *9.10. at 23.59*
+* Deadline is *22.10. at 23.59*
 * Same rules apply as with regular exercises, i.e. you can get points for trying and pseudocode
 
 ### Exercise 1
