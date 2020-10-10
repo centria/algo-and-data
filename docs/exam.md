@@ -77,7 +77,7 @@ Console.WriteLine(s.Calculate(array5)); // 3
 You are given a map of rooms in a house, and your task is to calculate, how many rooms a house has. A map is a grid where each square is either floor (marked with *0*) or wall (marked with *1*). Two floor squares are in the same room, if they are adjacent horizontally or vertically. You can assume each square on the outer perimeter is wall.
 
 * Create a class **Rooms**
-  * **int Calculate(int[,] input)**, returns the shortest possible size of the array after the removals.
+  * **int Calculate(int[,] input)**, returns the amount of rooms in the house.
 
 For example:
 
