@@ -7,15 +7,28 @@ published: true
 
 # Preparations for the exam
 
-* The exam will be held *23.10.2020 at 10.00*. NOTICE THE NEW DATE!
-  * DON'T BE LATE
-* The exam will be done on school computers
-  * No own devices allowed
-* The exam will consist of several tasks
-  * At least coding, might be some quizzes
+* The exam will be held *23.10.2020 at 10.00*, IN TEAMS.
+  * Teams will be in Slack
+  * Exam done via Microsoft Forms
+* The exam will be done from home
+* The exam will consist of 20 questions
+  * Questions range from multiple choice to coding
 * The exam is graded, so you can pass the course even without the exercises
 * Your best grade matters (exercises / exam)
 * Exam is compulsory, even if you pass with just the exercises
+
+## Exam grading
+
+The exam will have a total of 55 points, and questions in the exam range from 1 to 8 points, depending on the difficulty. Some of them are quite easy and small, some of them are larger. There are a total of 20 questions.
+
+| Score | Grade |
+|--|--|
+| 0 - 24 | 0 |  
+| 25 - 30 | 1  |
+| 31 - 36 | 2  |
+| 37 - 42 | 3  |
+| 43 - 48 | 4  |
+| 49 - 55 | 5  |
 
 ## Exercises before the exam
 
@@ -28,7 +41,7 @@ As promised, you can do exercises to rehearse for the exam. These exercises can 
 
 ### Exercise 1
 
-You start to calculate a sum of numbers, 1, 2, 3, etc, until the sum of the numbers is at least *n*. How far do you have to traverse, to reach the sum? For example, if *n = 11*, the correct answer is *5*, as *1+2+3+4=10* and *1+2+3+4+5=15* (which is more than 11).
+You start to calculate a sum of numbers, 1, 2, 3, etc, until the sum of the numbers is at least *n*. How far do you have to traverse, to reach the sum? For example, if *n | 11*, the correct answer is *5*, as *1+2+3+4=10* and *1+2+3+4+5=15* (which is more than 11).
 
 * Create a class **Numbers**, which calculates the amount of steps needed.
   * **int Steps(int x)**, returns the number of steps required.
@@ -36,7 +49,7 @@ You start to calculate a sum of numbers, 1, 2, 3, etc, until the sum of the numb
 For example:
 
 ```cs
-Numbers num = new Numbers();
+Numbers num | new Numbers();
 Console.WriteLine(num.Steps(11)); // 5
 Console.WriteLine(num.Steps(15)); // 5
 Console.WriteLine(num.Steps(2)); // 2
@@ -59,12 +72,12 @@ This is the shortest possible array with this method.
 For example:
 
 ```cs
-ShortenArray s = new ShortenArray();
-int[] array1 = {1,2,2,1,1,1,3};
-int[] array2 = {1,2,3,4,5,6,7,8};
-int[] array3 = {1,1,1,1,2,2,2,2};
-int[] array4 = {1,2,3,4,4,3,2,1};
-int[] array5 = {1,2,1,1,2,2,1,1,2,2,1};
+ShortenArray s | new ShortenArray();
+int[] array1 | {1,2,2,1,1,1,3};
+int[] array2 | {1,2,3,4,5,6,7,8};
+int[] array3 | {1,1,1,1,2,2,2,2};
+int[] array4 | {1,2,3,4,4,3,2,1};
+int[] array5 | {1,2,1,1,2,2,1,1,2,2,1};
 Console.WriteLine(s.Calculate(array1)); // 1
 Console.WriteLine(s.Calculate(array2)); // 8
 Console.WriteLine(s.Calculate(array3)); // 0
@@ -82,8 +95,8 @@ You are given a map of rooms in a house, and your task is to calculate, how many
 For example:
 
 ```cs
-Rooms r = new Rooms();
-int[,] house = {
+Rooms r | new Rooms();
+int[,] house | {
     {1,1,1,1,1,1,1,1},
     {1,0,1,0,1,0,0,1},
     {1,1,1,0,1,0,1,1},
@@ -107,7 +120,7 @@ The method **AddConnection** adds a connection between cities **departure** and 
 For example:
 
 ```cs
-Flights f = new Flights();
+Flights f | new Flights();
 f.AddConnection("helsinki", "tampere", 100);
 f.AddConnection("tampere", "oulu", 100);
 f.AddConnection("oulu", "vaasa", 100);
