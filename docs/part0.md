@@ -41,15 +41,15 @@ The exercise sessions are held in **Teams**, and are completely voluntary. These
 
 * Due to public demand, the grading has been changed and clarified a bit.
 * The course tasks consist of weekly(ish) exercises. They are all graded, usually 2 points per exercise (more points per larger/more difficult exercise). Each week will have roughly 10 points (some might have 8, some 12), so **60 points in total**.
-* A student must get at least 30 points in total to pass the course, and 54 to get a grade 5.
+* A student must get at least 25 points in total to pass the course, and 54 to get a grade 5.
 
 |Points | Grade |
 |:-----:|:-----:|
-| < 30  |   0   |
-| 30-35 |   1   |
-| 36-41 |   2   |
-| 42-47 |   3   |
-| 48-53 |   4   |
-| 54-60 |   5   |
+| <= 24 |   0   |
+| 25-30 |   1   |
+| 31-37 |   2   |
+| 38-43 |   3   |
+| 44-50 |   4   |
+| 51-60 |   5   |
 
 * Due to the corona virus situation, the exam has been postponed to fall, to 23.10.2020. *NOTICE THE NEW DATE!* The exam is graded, and the better grade will stand (either the exam grade or the exercise grade). The exam is compulsory, even if you have passing grade with the exercises.
