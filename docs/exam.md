@@ -8,11 +8,14 @@ published: true
 # Preparations for the exam
 
 * The exam will be held *23.10.2020 at 10.00*, IN TEAMS.
-  * Teams will be in Slack
-  * Exam done via Microsoft Forms
-* The exam will be done from home
+  * Teams link will be in Slack
+* Actual Exam done via Microsoft Forms
+* The exam will be done from home, from your own computer
+  * *Web camera on, so I can see you doing the exam!*
 * The exam will consist of 20 questions
   * Questions range from multiple choice to coding
+  * Question difficulty varies from easy to extreme
+  * Once again, even trying can get you points!
 * The exam is graded, so you can pass the course even without the exercises
 * Your best grade matters (exercises / exam)
 * Exam is compulsory, even if you pass with just the exercises
