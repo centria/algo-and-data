@@ -44,7 +44,7 @@ As promised, you can do exercises to rehearse for the exam. These exercises can 
 
 ### Exercise 1
 
-You start to calculate a sum of numbers, 1, 2, 3, etc, until the sum of the numbers is at least *n*. How far do you have to traverse, to reach the sum? For example, if *n | 11*, the correct answer is *5*, as *1+2+3+4=10* and *1+2+3+4+5=15* (which is more than 11).
+You start to calculate a sum of numbers, 1, 2, 3, etc, until the sum of the numbers is at least *n*. How far do you have to traverse, to reach the sum? For example, if *n = 11*, the correct answer is *5*, as *1+2+3+4=10* and *1+2+3+4+5=15* (which is more than 11).
 
 * Create a class **Numbers**, which calculates the amount of steps needed.
   * **int Steps(int x)**, returns the number of steps required.
@@ -52,7 +52,7 @@ You start to calculate a sum of numbers, 1, 2, 3, etc, until the sum of the numb
 For example:
 
 ```cs
-Numbers num | new Numbers();
+Numbers num = new Numbers();
 Console.WriteLine(num.Steps(11)); // 5
 Console.WriteLine(num.Steps(15)); // 5
 Console.WriteLine(num.Steps(2)); // 2
@@ -75,12 +75,12 @@ This is the shortest possible array with this method.
 For example:
 
 ```cs
-ShortenArray s | new ShortenArray();
-int[] array1 | {1,2,2,1,1,1,3};
-int[] array2 | {1,2,3,4,5,6,7,8};
-int[] array3 | {1,1,1,1,2,2,2,2};
-int[] array4 | {1,2,3,4,4,3,2,1};
-int[] array5 | {1,2,1,1,2,2,1,1,2,2,1};
+ShortenArray s = new ShortenArray();
+int[] array1 = {1,2,2,1,1,1,3};
+int[] array2 = {1,2,3,4,5,6,7,8};
+int[] array3 = {1,1,1,1,2,2,2,2};
+int[] array4 = {1,2,3,4,4,3,2,1};
+int[] array5 = {1,2,1,1,2,2,1,1,2,2,1};
 Console.WriteLine(s.Calculate(array1)); // 1
 Console.WriteLine(s.Calculate(array2)); // 8
 Console.WriteLine(s.Calculate(array3)); // 0
@@ -98,8 +98,8 @@ You are given a map of rooms in a house, and your task is to calculate, how many
 For example:
 
 ```cs
-Rooms r | new Rooms();
-int[,] house | {
+Rooms r = new Rooms();
+int[,] house = {
     {1,1,1,1,1,1,1,1},
     {1,0,1,0,1,0,0,1},
     {1,1,1,0,1,0,1,1},
@@ -123,7 +123,7 @@ The method **AddConnection** adds a connection between cities **departure** and 
 For example:
 
 ```cs
-Flights f | new Flights();
+Flights f = new Flights();
 f.AddConnection("helsinki", "tampere", 100);
 f.AddConnection("tampere", "oulu", 100);
 f.AddConnection("oulu", "vaasa", 100);
