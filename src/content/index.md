@@ -4,6 +4,9 @@ nav_order: 1
 hidden: false
 ---
 
+<Note><h2>Dotnet 6.0 support ends.
+In the fall dotnet8.0! will be in use!</h2></Note>
+
 Welcome to the Algorithms and Data Structures course!
 
 ## If you just want to learn
